@@ -46,11 +46,11 @@ At the end of the project we then had to deliver a presentation on our project c
 
 ## Planning
 
-### Task management.  
+### Task management  
 
 In order to create, assign and manage tasks, we created a public Trello board which all of the members our group could access. This made working on our project much easier and allowed us to work more effectively as a group. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
 
-### Development Overivew
+### Development Overview
 
 1. Brainstorm:
 2. Pick an idea
