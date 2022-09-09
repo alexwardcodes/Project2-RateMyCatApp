@@ -50,6 +50,8 @@ At the end of the project we then had to deliver a presentation on our project c
 
 In order to create, assign and manage tasks, we created a public Trello board which all of the members our group could access. This made working on our project much easier and allowed us to work more effectively as a group. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
 
+![Screenshot 2022-09-09 at 12 46 53](https://media.git.generalassemb.ly/user/44781/files/518d6b93-92a0-493b-8d0a-33add6ebed95)
+
 ### Development Overview
 
 1. Brainstorm:
