@@ -68,13 +68,33 @@ In order to create, assign and manage tasks, we created a public Trello board wh
 
 ## Build/Code Process
 
-Documented below are the stages we went through in order to build the code for our project.
+Documented below are the stages we went through in order to build the code for our project.  
 
 ### Stage 1: Brainstorming  
 
 etc
 etc
 etc
+
+### Wireframes
+
+You can find the link to our wireframes [here]()
+
+### User Stories
+
+As an unregistered user, I want a function to sign up to the site  
+As an unregistered user, I want a quick rundown of the site’s purpose  
+As a registered user, I want to be able to create a profile  
+As a registered user, I want to be able to create a profile of my cat  
+As a user of the site, I want to be able to see other users’ cats  
+As a user, I want to be able to rate other cats  
+As a user, I want to be able to edit my cat’s profile  
+As a user, I want to be able to see which cats are most popular  
+As a user, I want to be able to log in/out of my account  
+BONUS: As a user, I want to be able to comment on other cats  
+BONUS: As a user, I want to learn about the creators of the site  
+BONUS: As a user, I want to see cats in other locations  
+BONUS: As a user, I want to see who other users are  
 
 ## Challenges
 
