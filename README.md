@@ -76,9 +76,13 @@ etc
 etc
 etc
 
+### ERD
+
+You can find the link to our ERD [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/a3ae43f2f5e76c60127c7b5af1a83c0d83f1be7f/ERDs/RateMyCat%20ERD%20Final.pdf)
+
 ### Wireframes
 
-You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/a3ae43f2f5e76c60127c7b5af1a83c0d83f1be7f/ERDs/RateMyCat%20ERD%20Final.pdf)
+You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/8c10dd626513ff39705da146a9542ff4496579a5/Wireframe.png)
 
 ### User Stories
 
