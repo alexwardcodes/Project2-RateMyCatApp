@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const catSchema = ({
+const catSchema = mongoose.Schema({
     name: String,
     age: Number,
     breed: String,
