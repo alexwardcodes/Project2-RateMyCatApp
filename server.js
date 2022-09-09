@@ -17,7 +17,8 @@ app._router.use(express.static("public"));
 const expressLayouts = require("express-ejs-layouts");
 
 // Import routes here
-const authRouter = require('./routes/auth');
+// const authRouter = require('./routes/auth');
+const indexRouter = require("./routes/index");
 
 app.use(expressLayouts);
 
@@ -42,6 +43,7 @@ app.use(expressLayouts);
 
 // Mount routes here
 // app.use("/", authRouter);
+app.use("/", indexRouter);
 
 app.set("view engine", "ejs");
 
