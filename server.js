@@ -1,8 +1,8 @@
 const express = require("express");
 
-require("dotenv").config;
+require("dotenv").config();
 
-const flash = require("flash");
+const flash = require("connect-flash");
 
 const mongoose = require("mongoose");
 
@@ -14,6 +14,37 @@ app.use(flash());
 
 app._router.use(express.static("public"));
 
+const expressLayouts = require("express-ejs-layouts");
+
+// Import routes here
+const authRouter = require('./routes/auth');
+
+app.use(expressLayouts);
+
+// let session = require('express-session');
+// let passport = require('./helper/ppConfig');
+
+// app.use(session({
+//   secret: process.env.SECRET,
+//   saveUninitialized: true,
+//   resave: false,
+//   cookie: {maxAge: 3600000}
+// }))
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// app.use(function(req, res, next) {
+//   res.locals.currentUser = req.user;
+//   res.locals.alerts = req.flash();
+//   next();
+// })
+
+// Mount routes here
+// app.use("/", authRouter);
+
+app.set("view engine", "ejs");
+
 mongoose.connect(
   process.env.MongoDBURL,
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -21,8 +52,6 @@ mongoose.connect(
     console.log("MongoDB connected!!!");
   }
 );
-
-app.set("view engine", "ejs");
 
 app.listen(PORT, () => {
   console.log(`RateMyCat is running on port ${PORT}`);
