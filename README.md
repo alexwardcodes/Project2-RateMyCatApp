@@ -78,7 +78,7 @@ etc
 
 ### Wireframes
 
-You can find the link to our wireframes [here]()
+You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/a3ae43f2f5e76c60127c7b5af1a83c0d83f1be7f/ERDs/RateMyCat%20ERD%20Final.pdf)
 
 ### User Stories
 
