@@ -1,0 +1,46 @@
+
+<h2> <%= cat.catname %> </h2>
+
+<!-- IMAGE PLACE HOLDER -->
+<div>
+    Image: <%= cat.image %>
+</div>
+<!-- IMAGE PLACE HOLDER -->
+
+<div>
+    Age: <%= cat.age %>
+</div>
+
+<div>
+    Breed: <%= cat.breed %>
+</div>
+
+<div>
+    Location: <%= cat.location %>
+</div>
+
+<div>
+    Likes: <%= cat.likes %>
+</div>
+
+<div>
+    Dislikes: <%= cat.dislikes %>
+</div>
+
+<div>
+    CreatedAt: <%= moment(cat.createdAt).fromNow() %>
+</div>
+
+<div>
+   UpdatedAt: <%= moment(cat.updatedAt).fromNow() %>
+</div>
+
+<br>
+
+<% cat.user.forEach(function(user) { %>
+
+<div> Owner: <%= user.name %></div>
+<div> CreatedAt: <%= moment(user.createdAt).fromNow() %></div>
+<hr>
+
+<% }) %>

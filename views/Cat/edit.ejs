@@ -1,0 +1,54 @@
+<h1> Edit Cat </h1>
+
+<form method="POST" action="/Cat/update?_method=PUT">
+
+    <div>
+        <label>Cat Name</label>
+        <input name="name" type="text" value="<%= Cat.name %>" />
+    </div>
+
+     <!-- IMAGE PLACE HOLDER -->
+     <div>
+        <label>Image</label>
+        <inpute name="image" type="text" value="<%= Cat.dislikes %>" />
+    </div>
+    <!-- IMAGE PLACE HOLDER -->
+
+    <div>
+        <label>Age</label>
+        <inpute name="age" type="number" value="<%= Cat.age %>" />
+    </div>
+
+    <div>
+        <label>Breed</label>
+        <input name="breed" type="text" value="<%= Cat.breed %>" />
+    </div>
+
+    <div>
+        <label>Location</label>
+        <input name="location" type="text" value="<%= Cat.location %>" />
+    <!-- again do we use drop down?? -->
+    </div>
+
+    <div>
+        <label>Likes</label>
+        <inpute name="likes" type="text" value="<%= Cat.likes %>" />
+    </div>
+
+    <div>
+        <label>Dislikes</label>
+        <inpute name="dislikes" type="text" value="<%= Cat.dislikes %>" />
+    </div>
+
+    <div>
+        <label>Dislikes</label>
+        <inpute name="dislikes" type="text" value="<%= Cat.dislikes %>" />
+    </div>
+
+
+    <input type="hidden" name="id" value="<%= Cat._id %>" />
+
+    <button type="submit"> Update Cat </button>
+
+</form>
+

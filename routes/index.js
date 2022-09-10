@@ -1,4 +1,9 @@
-exports.index_get = (req, res) => {
-      res.render('home/index', {welcomeMessage: "Welcome to Rate My Cat - the site for cat lovers!"});
-    };
-    
+const express = require("express");
+
+const router = express.Router();
+
+const indexCtrl = require("../controllers/index");
+
+router.get("/", indexCtrl.index_get);
+
+module.exports = router;

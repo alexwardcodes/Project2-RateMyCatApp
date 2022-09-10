@@ -7,6 +7,7 @@ const catSchema = mongoose.Schema({
     favourites: String,
     dislikes: String,
     catComment: String,
+    location: String, //drop down of counties? best place to put location vs in user??
     user: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

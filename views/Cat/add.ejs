@@ -1,0 +1,62 @@
+
+<h1> Add Cat </h1>
+
+<form method="POST" action="/Cat/add">
+
+<div class="form-group">
+    <label>Cat Name</label>
+    <input name="name" type="text" class="form-control"/>
+</div>
+
+<!-- IMAGE UPLOAD PLACE HOLDER -->
+<div class="form-group">
+    <label>Image</label>
+    <input name="image" type="text" class="form-control" />
+</div>
+<!-- IMAGE UPLOAD PLACE HOLDER -->
+
+<div class="form-group">
+    <label>Age</label>
+    <textarea name="age" type="number" class="form-control"></textarea>
+    <!-- instead of age we could ask for birth month/year? and have a function to calculate age that will obviously update age automatically -->
+</div>
+
+<div class="form-group">
+    <label>Breed</label> 
+<input name="breed" type="text" class="form-control"/>
+<!-- potential drop down of common breeds??? -->
+</div>
+
+<div class="form-group">
+    <label>Location</label> 
+<input name="location" type="text" class="form-control"/>
+<!-- potential drop down of counties/cities??? -->
+</div>
+
+<div class="form-group">
+    <label>Likes</label>
+    <input name="likes" type="text" class="form-control" />
+</div>
+
+<div class="form-group">
+    <label>Dislikes</label>
+    <input name="dislikes" type="text" class="form-control" />
+</div>
+
+
+<div class="form-group">
+    <label>User</label>
+    <select name="User[]" multiple="multiple" class="form-control">
+
+        <% Users.forEach(function(User) {     %> 
+            <option value="<%= User._id %>" > <%= User.name %> </option>
+        <% }) %>
+
+    </select>
+</div>
+
+<button type="submit" class="btn btn-primary">
+    Create Cat
+</button>
+
+</form>
