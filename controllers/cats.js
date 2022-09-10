@@ -47,14 +47,6 @@ exports.Cat_create_post = (req, res) => {
         console.log(err);
         res.send("Please try again later; or contact admin for help.");
     })
-
-    // Embedded Design Model
-    // User.findById(req.body.User, 
-    //     (error, User) => {
-    //         User.Cat.push(Cat);
-    //         User.save();
-    //         res.redirect("/User/index");
-    // })
 }
 
 

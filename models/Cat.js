@@ -13,9 +13,12 @@ const catSchema = mongoose.Schema({
         ref: 'User'
     }],
     image: String,
-    rating: String
+    rating: Number,
 }, { timestamps: true })
 
 const Cat = mongoose.model("Cat", catSchema);
 
 module.exports = {Cat};
+
+$div.css('left', $div.offset().left - 15)
+
