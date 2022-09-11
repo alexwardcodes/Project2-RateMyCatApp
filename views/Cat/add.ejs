@@ -21,10 +21,45 @@
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Image</label>
                 <div class="col-sm-10">
-                    <input name="image" type="text" class="form-control" />
+                    <!-- <input name="image" type="text" class="form-control" /> -->
+                    <input type="file"id="photo" name="photo"accept="image/*">
                 </div>
             </div>
             <!-- IMAGE UPLOAD PLACE HOLDER -->
+
+            <!-- Working on current date limit for birthdate calendar and date comparison to work out age -->
+
+<!-- should prevent being able to select a future date from calendar -->
+<% (function($){ %>
+    <% var dtToday = new Date(); %>
+    <% var month = dtToday.getMonth() + 1;  %>
+    <% var day = dtToday.getDate(); %>
+    <% var year = dtToday.getFullYear(); %>
+    <% if(month < 10) %>
+    <%    month = '0' + month.toString(); %>
+    <% if(day < 10) %>
+    <%  day = '0' + day.toString(); %>
+    <% var maxDate = year + '-' + month + '-' + day; %>
+    <% $('#dateID').attr('max', maxDate); %>
+    <% }) %>
+    
+    <div class="form-group">
+        <label>Birth Date</label>
+        <input type="date" id="dateID" name="age" min="2000-01-01">
+        <!-- <input id="dateID" type="date"/> -->
+    </div>
+    
+    <!-- compare current date and birth date -->
+    <% function getYearDiffWithMonth(bday ) { %>
+    <%   const ms = endDate.getTime() - startDate.getTime(); %>
+      
+    <% const date = new Date(ms); %>
+      
+    <% return Math.abs(date.getUTCFullYear() - 1970); %>
+        <%   } %>
+    
+    <% console.log(getYearDiffWithMonth(new Date('1999-09-24'), new Date('2022-01-17'))); %>
+    <!-- ----------------------------------------------------------------------------------------------- -->
             
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Birth Date</label>

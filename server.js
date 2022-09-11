@@ -21,6 +21,7 @@ const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 
+// app.use(express.static("public"));
 app.use(expressLayouts);
 
 // let session = require('express-session');
