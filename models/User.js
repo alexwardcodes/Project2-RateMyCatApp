@@ -20,12 +20,13 @@ const userSchema = mongoose.Schema({
     //     minlength: [8, "Your password is too weak"]
     // },
     location: String,
+    bio: String,
     cat: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Cat'
     }],
-    bio: String
-}, { timestamps: true });
+}, 
+{ timestamps: true });
 
 // userSchema.methods.verifyPassword = function(password) {
 //     console.log("password from User" + password);
