@@ -26,7 +26,7 @@
             
             <% Cats.forEach(function(Cat){ %>  
                 <tr>
-                    <td> <a href="/Cat/detail?id=<%= Cat._id %>"> <h3><%= Cat.name %></h3> </a> </td>
+                    <td> <a href="/cat/detail?id=<%= Cat._id %>"> <h3><%= Cat.name %></h3> </a> </td>
                     <td> <%= Cat.image %></td>
                     <td> <%= Cat.age %></td>
                     <td> <%= Cat.breed %></td>
@@ -39,8 +39,8 @@
                     <td> <%= Cat.owner %></td>
                     <td> <%= moment(Cat.createdAt).fromNow() %></td>
                     <td> <%= moment(Cat.updatedAt).fromNow() %></td>
-                    <td> <a href="/Cat/edit?id=<%= Cat._id %>">Edit</a></td>
-                    <td> <a href="/Cat/delete?id=<%= Cat._id %>">Delete</a></td>
+                    <td> <a href="/cat/edit?id=<%= Cat._id %>">Edit</a></td>
+                    <td> <a href="/cat/delete?id=<%= Cat._id %>">Delete</a></td>
             
                 </tr>
             <% }) %>
