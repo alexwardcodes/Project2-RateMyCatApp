@@ -20,6 +20,7 @@ const expressLayouts = require("express-ejs-layouts");
 // const authRouter = require('./routes/auth');
 const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
+const userRouter = require("./routes/users");
 
 // app.use(express.static("public"));
 app.use(expressLayouts);
@@ -47,6 +48,7 @@ app.use(expressLayouts);
 // app.use("/", authRouter);
 app.use("/", indexRouter);
 app.use("/", catRouter);
+app.use("/", userRouter);
 
 app.set("view engine", "ejs");
 
