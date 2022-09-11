@@ -15,6 +15,7 @@ const userCntrl = require("../controllers/users");
 
 // Routes
 // router.get("/USER/add", IsLoggedIn, userCntrl.user_create_get);
+router.get("/user/add", userCntrl.user_create_get);
 router.post("/user/add", userCntrl.user_create_post);
 router.get("/user/index", userCntrl.user_index_get);
 router.get("/user/detail", userCntrl.user_show_get);
