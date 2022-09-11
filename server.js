@@ -12,7 +12,7 @@ const app = express();
 
 app.use(flash());
 
-app._router.use(express.static("public"));
+app.use(express.static("public"));
 
 const expressLayouts = require("express-ejs-layouts");
 
