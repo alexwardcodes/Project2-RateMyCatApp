@@ -20,5 +20,3 @@ const Cat = mongoose.model("Cat", catSchema);
 
 module.exports = {Cat};
 
-$div.css('left', $div.offset().left - 15)
-
