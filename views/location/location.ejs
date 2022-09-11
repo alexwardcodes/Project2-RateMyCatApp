@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate My Cat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    Shared Header Layout from Layout page
+
+    <div><h1><a href="/">Rate My Cat</a></h1></div>
+
+<hr>
+
+    <% if(alerts.success) { %> 
+        <% alerts.success.forEach(function(msg){ %>
+            <div class="alert alert-success"><%= msg %></div>
+       <% }) %>
+    <% } %>
+
+    <% if(alerts.error) { %> 
+        <% alerts.error.forEach(function(msg){ %>
+            <div class="alert alert-danger"><%= msg %></div>
+       <% }) %>
+    <% } %>
+
+    <nav>
+
+        <div class="nav">
+        <a href="/cat/index" class="btn btn-outline-primary">Cats</a>
+        <a href="/cat/add" class="btn btn-outline-primary">Add Cat</a>
+
+        <a href="/location/index" class="btn btn-outline-primary">Locations</a>
+        <a href="/location/add" class="btn btn-outline-primary">Add Location</a>
+    </div>
+
+        <div class="menuAlignment">
+            <% if(currentUser) { %> 
+                Hi <%= currentUser.firstName %> <%= currentUser.lastName %>
+                <a href="/auth/logout" class="btn btn-outline-primary">Logout</a>
+            
+            <% } else { %>
+                <a href="/auth/signin"  class="btn btn-outline-primary">Signin</a>
+                <a href="/auth/signup"  class="btn btn-outline-primary">Signup</a>
+            
+            <% } %>
+        </div>
+    </nav>
+
+    <hr>
+
+    <%- body %>
+
+    <br><br><hr><br>
+    Shared Footer Layout from Layout page
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
