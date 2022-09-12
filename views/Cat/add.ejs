@@ -108,10 +108,10 @@
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">User</label>
                 <div class="col-sm-10">
-                <select name="User[]" multiple="multiple" class="form-control users-form">
+                <select name="user[]" multiple="multiple" class="form-control users-form">
             
-                    <% Users.forEach(function(User) {     %> 
-                        <option value="<%= User._id %>" > <%= User.name %> </option>
+                    <% users.forEach(function(user) {     %> 
+                        <option value="<%= user._id %>" > <%= user.name %> </option>
                     <% }) %>
             
                 </select>

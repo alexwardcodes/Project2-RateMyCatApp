@@ -1,6 +1,11 @@
-<h2> <%= cat.catname %> </h2>
 
-<!-- IMAGE PLACE HOLDER -->
+<div class="title"> <h2> <%= cat.catname %> </h2> </div>
+    <br>
+<nav> 
+     <div class="flex-container">
+        <div class="second-nav"></div>
+        <div class="main-nav">
+            <!-- IMAGE PLACE HOLDER -->
 <div>
     Image: <%= cat.image %>
 
@@ -20,10 +25,6 @@
 
 <div>
     Breed: <%= cat.breed %>
-</div>
-
-<div>
-    Location: <%= cat.location %>
 </div>
 
 <div>
@@ -51,3 +52,9 @@
 <hr>
 
 <% }) %>
+
+    </div>
+    </div>
+
+</div>  
+</nav>
