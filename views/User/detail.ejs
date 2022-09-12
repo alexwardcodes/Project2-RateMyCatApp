@@ -1,25 +1,32 @@
-<div>
-
-  <div>
-    <h3> User Details</h3>
-  </div>
-
-  <div>First Name: <%= user.firstName %></div>
-  <div>Last Name: <%= user.lastName %></div>
-  <div>Email Address: <%= user.emailAddress %></div>
-  <div> Location: <%= user.Location %></div>
-  <div> Bio: <%= user.bio %></div>
-  <div>Created At: <%= moment(user.createdAt).fromNow() %></div>
 
 
-  <br />
+<div class="title"> <h1> User Details </div>
+    <br>
+<nav> 
+     <div class="flex-container">
+        <div class="second-nav"></div>
+        <div class="main-nav pad">
+          <div>
 
-  <% user.cat.forEach(function(cat) { %>
-  <hr />
-  <div>
-    <div> Cat: <%= cat.name %> </div>
-    <div> Cat: <%= cat.image %> </div>
-  </div>
-  <% }) %>
-</div>
 
+
+            <div>First Name: <%= user.firstName %></div>
+            <div>Last Name: <%= user.lastName %></div>
+            <div>Email Address: <%= user.emailAddress %></div>
+            <div> Location: <%= user.location %></div>
+            <div> Bio: <%= user.bio %></div>
+            <div>Joined: <%= moment(user.createdAt).fromNow() %></div>
+          
+          
+            <br />
+          
+            <% user.cat.forEach(function(cat) { %>
+            <hr />
+            <div>
+              <div> Cat: <%= cat.name %> </div>
+              <div> Cat: <%= cat.image %> </div>
+            </div>
+            <% }) %>
+          </div>
+    </div>
+    </div>
