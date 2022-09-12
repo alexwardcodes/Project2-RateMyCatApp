@@ -15,8 +15,8 @@ const moment = require('moment');
 exports.cat_create_get = (req, res) => {
     // res.render("Cat/add");
     User.find()
-    .then((Users) => {
-        res.render("cat/add", {Users})
+    .then((users) => {
+        res.render("cat/add", {users})
     })
     .catch((err) => {
         console.log(err);
@@ -28,17 +28,17 @@ exports.cat_create_post = (req, res) => {
 
     // Saving the data into the Database
 
-    let Cat = new Cat(req.body);
+    let cat = new Cat(req.body);
 
-    Cat.save()
+    cat.save()
     .then(() => {
 
 
         // M2MR
-        req.body.User.forEach(User => {
-            User.findById(User, (error, User) => {
-                User.Cat.push(Cat);
-                User.save();
+        req.body.user.forEach(user => {
+            User.findById(user, (error, user) => {
+                user.cat.push(cat);
+                user.save();
             })
         });
         res.redirect("/cat/index");
@@ -52,9 +52,9 @@ exports.cat_create_post = (req, res) => {
 
 // HTTP GET - Cat Index API
 exports.cat_index_get = (req, res) => {
-    Cat.find().populate('User')
-    .then(Cats => {
-        res.render("cat/index", {Cats: Cats, moment}) // Cats: Cats, moment: moment
+    Cat.find().populate('user')
+    .then(cats => {
+        res.render("cat/index", {cats: cats, moment}) // Cats: Cats, moment: moment
     })
     .catch(err => {
         console.log(err);
@@ -66,9 +66,9 @@ exports.cat_show_get = (req, res) => {
     console.log(req.query.id);
 
     // Find the Cat by ID
-    Cat.findById(req.query.id).populate('User')
-    .then(Cat => {
-        res.render("cat/detail", {Cat, moment}) // Cat: Cat, moment: moment
+    Cat.findById(req.query.id).populate('user')
+    .then(cat => {
+        res.render("cat/detail", {cat, moment}) // Cat: Cat, moment: moment
     })
     .catch(err => {
         console.log(err)
@@ -94,8 +94,8 @@ exports.cat_delete_get = (req, res) => {
 // HTTP GET - Load Cat Edit Form
 exports.cat_edit_get = (req, res) => {
     Cat.findById(req.query.id)
-    .then((Cat) => {
-        res.render("cat/edit", {Cat})
+    .then((cat) => {
+        res.render("cat/edit", {cat})
     })
     .catch(err => {
         console.log(err);
