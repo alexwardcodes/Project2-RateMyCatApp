@@ -35,8 +35,16 @@
 
             
                 <!-- compare current date and birth date -->
+    
+                <% function getYearDiffWithMonth(startDate, endDate) { %>
+                <%   const ms = endDate.getTime() - startDate.getTime(); %>
+                
+                <%  const date = new Date(ms); %>
+                
+                <%  return Math.abs(date.getUTCFullYear() - 1970); %>
+                <% } %>
 
-
+                <% console.log(getYearDiffWithMonth(new Date('1999-09-24'), new Date('2022-01-17')),); %>
                 
                 <!-- ----------------------------------------------------------------------------------------------- -->
             
@@ -46,7 +54,13 @@
                     <input  type="date" class="bdaymonth" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
 
                 </div>
+
             </div>
+
+            <!-- <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Age</label>
+            </div> -->
+
             
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Breed</label>

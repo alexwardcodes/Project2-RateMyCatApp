@@ -4,15 +4,23 @@
 
     <div>
         <label>Cat Name</label>
-        <input name="name" type="text" value="<%= Cat.name %>" />
+        <input name="name" type="text" value="<%= cat.name %>" />
     </div>
 
-    <!-- IMAGE PLACE HOLDER -->
-    <div>
-        <label>Image</label>
-        <inpute name="image" type="text" value="<%= Cat.dislikes %>" />
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Photo</label>
+        <div class="col-sm-10">
+            <input type="file" id="photo" name="photo" accept="image/*" onchange="loadFile(event)">
+            <p><img id="output" width="100" /></p>
+
+            <script type="text/javascript">
+                var loadFile = function(event) {
+                  var image = document.getElementById('output');
+                  image.src = URL.createObjectURL(event.target.files[0]);
+                };
+              </script>
+        </div>
     </div>
-    <!-- IMAGE PLACE HOLDER -->
 
     <div>
         <label>Birth Date</label>
@@ -21,7 +29,7 @@
 
     <div>
         <label>Breed</label>
-        <select name="breed" value="<%= Cat.breed %>">
+        <select name="breed">
             <option value="">Please select an option</option>
             <option value="britishLonghair">British Longhair</option>
             <option value="britishShorthair">British Shorthair</option>
@@ -100,21 +108,21 @@
 
     <div>
         <label>Likes</label>
-        <inpute name="likes" type="text" value="<%= Cat.likes %>" />
+        <inpute name="likes" type="text" value="<%= cat.likes %>" />
     </div>
 
     <div>
         <label>Dislikes</label>
-        <inpute name="dislikes" type="text" value="<%= Cat.dislikes %>" />
+        <inpute name="dislikes" type="text" value="<%= cat.dislikes %>" />
     </div>
 
     <div>
         <label>Dislikes</label>
-        <inpute name="dislikes" type="text" value="<%= Cat.dislikes %>" />
+        <inpute name="dislikes" type="text" value="<%=  cat.dislikes %>" />
     </div>
 
 
-    <input type="hidden" name="id" value="<%= Cat._id %>" />
+    <input type="hidden" name="id" value="<%= cat._id %>" />
 
     <button type="submit"> Update Cat </button>
 

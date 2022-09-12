@@ -14,6 +14,7 @@
   "author": "Sasha Ward, Dan Emsley, Ashish Singh",
   "license": "ISC",
   "dependencies": {
+    "average-rating": "^2.0.3",
     "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",
     "dotenv": "^16.0.2",
