@@ -24,7 +24,7 @@
                     <form action="/stats" enctype="multipart/form-data" method="post">
                         <div class="form-group">
                           <input type="file" class="form-control-file" name="uploaded_file" onchange="loadFile(event)" accept="image/*">
-                          <p><img id="output" width="100" /></p>
+                          <p> <img id="output" width="100" /> </p>
                           <script type="text/javascript">
                             var loadFile = function(event) {
                               var image = document.getElementById('output');
@@ -44,20 +44,17 @@
 
             </div>
 
-            <% function calculateAge(birthday) { %> 
-            <% var ageDifMs = Date.now() - birthday; &>
+            <% function calculateAge(age) { %> 
+            <% var ageDifMs = Date.now() - age; %>
             <% var ageDate = new Date(ageDifMs); %>
             <% return Math.abs(ageDate.getUTCFullYear() - 1970); %>
             <% } %>
     
 
- 
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Age <% calculateAge %></label>
 
                 
-                <!-- ----------------------------------------------------------------------------------------------- -->
-
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Age</label>
             </div>
 
             <div class="mb-3 row">
