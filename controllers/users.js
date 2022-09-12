@@ -29,7 +29,7 @@ exports.user_create_post = (req, res) => {
 
 // HTTP GET- User Index API
 exports.user_index_get = (req, res) => {
-    User.find()
+    User.find().populate('cat')
     .then(users => {
         res.render("user/index", {users: users, moment}) 
     })
@@ -43,7 +43,7 @@ exports.user_show_get = (req, res) => {
     console.log(req.query.id);
 
     // Find the User by ID
-    User.findById(req.query.id)
+    User.findById(req.query.id).populate('cat')
     .then(user => {
         res.render("user/detail", {user, moment}) 
     })
