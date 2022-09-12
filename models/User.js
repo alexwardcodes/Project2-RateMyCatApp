@@ -14,11 +14,11 @@ const userSchema = mongoose.Schema({
         minlength: [3, "Your last name must be more than 3 characters"]
     },
     emailAddress: String,
-    // password: {
-    //     type: String,
-    //     required: true,
-    //     minlength: [8, "Your password is too weak"]
-    // },
+    password: {
+         type: String,
+         required: true,
+         minlength: [8, "Your password is too weak"]
+    },
     location: String,
     bio: String,
     cat: [{
