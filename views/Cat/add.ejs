@@ -21,17 +21,21 @@
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Photo</label>
                 <div class="col-sm-10">
-                    <input type="file" id="photo" name="photo" accept="image/*" onchange="loadFile(event)">
-                    <p><img id="output" width="100" /></p>
+                    <form action="/stats" enctype="multipart/form-data" method="post">
+                        <div class="form-group">
+                          <input type="file" class="form-control-file" name="uploaded_file" onchange="loadFile(event)" accept="image/*">
+                          <p><img id="output" width="100" /></p>
+                          <script type="text/javascript">
+                            var loadFile = function(event) {
+                              var image = document.getElementById('output');
+                              image.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                          </script>
+                                 
+                        </div>
+                      </form>
 
-                    <script type="text/javascript">
-                        var loadFile = function(event) {
-                          var image = document.getElementById('output');
-                          image.src = URL.createObjectURL(event.target.files[0]);
-                        };
-                      </script>
-                </div>
-            </div>
+            <!-- cats need to be stored in images/uploads  -->
 
             
                 <!-- compare current date and birth date -->
@@ -51,7 +55,7 @@
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Birth Date</label>
                 <div class="col-sm-10">
-                    <input  type="date" class="bdaymonth" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
+                     <input  type="date" class="bdaymonth" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
 
                 </div>
 
@@ -61,7 +65,6 @@
                 <label class="col-sm-2 col-form-label">Age</label>
             </div> -->
 
-            
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Breed</label>
                 <div class="col-sm-10">
@@ -85,67 +88,7 @@
                 </select>
                 </div>
             </div>
-            
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Location</label>
-                <div class="col-sm-10">
-                <select name="location" class="form-control">
-                    <option value="">Please select an option</option>
-                    <option value="bath">Bath and North East Somerset</option>
-                    <option value="bedfordshire">Bedfordshire</option>
-                    <option value="berkshire">Berkshire</option>
-                    <option value="bristol">Bristol</option>
-                    <option value="buckinghamshire">Buckinghamshire</option>
-                    <option value="cambridgeshire">Cambridgeshire</option>
-                    <option value="cheshire">Cheshire</option>
-                    <option value="cornwall">Cornwall</option>
-                    <option value="county Durham">County Durham</option>
-                    <option value="cumbria">Cumbria</option>
-                    <option value="derbyshire">Derbyshire</option>
-                    <option value="devon">Devon</option>
-                    <option value="dorset">Dorset</option>
-                    <option value="riding">East Riding of Yorkshire</option>
-                    <option value="eastSussex">East Sussex</option>
-                    <option value="essex">Essex</option>
-                    <option value="gloucestershire">Gloucestershire</option>
-                    <option value="greaterLondon">Greater London</option>
-                    <option value="greaterManchester">Greater Manchester</option>
-                    <option value="hampshire">Hampshire</option>
-                    <option value="herefordshire">Herefordshire</option>
-                    <option value="hertfordshire">Hertfordshire</option>
-                    <option value="isleofWight">Isle of Wight</option>
-                    <option value="islesofScilly">Isles of Scilly</option>
-                    <option value="kent">Kent</option>
-                    <option value="lancashire">Lancashire</option>
-                    <option value="leicestershire">Leicestershire</option>
-                    <option value="lincolnshire">Lincolnshire</option>
-                    <option value="merseyside">Merseyside</option>
-                    <option value="norfolk">Norfolk</option>
-                    <option value="northSomerset">North Somerset</option>
-                    <option value="northYorkshire">North Yorkshire</option>
-                    <option value="northamptonshire">Northamptonshire</option>
-                    <option value="northumberland">Northumberland</option>
-                    <option value="nottinghamshire">Nottinghamshire</option>
-                    <option value="oxfordshire">Oxfordshire</option>
-                    <option value="rutland">Rutland</option>
-                    <option value="shropshire">Shropshire</option>
-                    <option value="somerset">Somerset</option>
-                    <option value="southGloucestershire">South Gloucestershire</option>
-                    <option value="southYorkshire">South Yorkshire</option>
-                    <option value="staffordshire">Staffordshire</option>
-                    <option value="suffolk">Suffolk</option>
-                    <option value="surrey">Surrey</option>
-                    <option value="tyne&Wear">Tyne & Wear</option>
-                    <option value="warwickshire">Warwickshire</option>
-                    <option value="westMidlands">West Midlands</option>
-                    <option value="westSussex">West Sussex</option>
-                    <option value="westYorkshire">West Yorkshire</option>
-                    <option value="wiltshire">Wiltshire</option>
-                    <option value="worcestershire">Worcestershire</option>
-            
-                </select>
-                </div>
-            </div>
+    
             
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Likes</label>
