@@ -22,9 +22,11 @@
             
             <% users.forEach(function(user){   %>  
             <tr>
-                <td> <a href="/user/detail?id=<%= user._id %>"><%= user.name %></a> </td>
+                <td> <a href="/user/detail?id=<%= user._id %>"><%= user.firstName %></a> </td>
+                <td> <a href="/user/detail?id=<%= user._id %>"><%= user.lastName %></a> </td>
                 <td> <%= user.emailAddress %></td>
-                <td> <%= user.phoneNumber %></td>
+                <td> <%= user.location %></td>
+                <td> <%= user.bio %></td>
                 <td> <%= moment(user.createdAt).fromNow() %></td>
                 <td><a href="/user/edit?id=<%= user._id %>">Edit</a></td>
                 <td><a href="/user/delete?id=<%= user._id %>">Delete</a></td>

@@ -1,11 +1,16 @@
-<!-- <div>
+<div>
+
   <div>
-    <h3><%= `${user.firstName} + ${user.lastName}`%></h3>
+    <h3> User Details</h3>
   </div>
 
+  <div>First Name: <%= user.firstName %></div>
+  <div>Last Name <%= user.LastName %></div>
   <div>Email Address: <%= user.emailAddress %></div>
+  <div> Location: <%= user.Location %></div>
   <div> Bio: <%= user.bio %></div>
   <div>Created At: <%= moment(user.createdAt).fromNow() %></div>
+
 
   <br />
 
@@ -16,5 +21,5 @@
     <div> Cat: <%= cat.image %> </div>
   </div>
   <% }) %>
-</div> -->
+</div>
 
