@@ -14,7 +14,7 @@ const locationCntrl = require("../controllers/location");
 const IsLoggedIn = require('../helper/isLoggedIn');
 
 // Routes
-router.get("/location/add", IsLoggedIn, locationCntrl.location_create_get);
+router.get("/location/add", locationCntrl.location_create_get);
 router.post("/location/add", locationCntrl.location_create_post);
 router.get("/location/index", locationCntrl.location_index_get);
 router.get("/location/detail", locationCntrl.location_show_get);

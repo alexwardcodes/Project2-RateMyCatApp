@@ -11,7 +11,6 @@
                     <th> Image </th>
                     <th> Age </th>
                     <th> Breed </th>
-                    <th> Location </th>
                     <th> Likes </th>
                     <th> Dislikes </th>
                 </tr>
@@ -24,23 +23,22 @@
                     <th> Delete </th>
                 </tr>
             
-            <% Cats.forEach(function(Cat){ %>  
+            <% cats.forEach(function(cat){ %>  
                 <tr>
-                    <td> <a href="/cat/detail?id=<%= Cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
+                    <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
                     <td> <%= cat.image %></td>
                     <td> <%= cat.age %></td>
                     <td> <%= cat.breed %></td>
-                    <td> <%= cat.location %></td>
                     <td> <%= cat.likes %></td>
                     <td> <%= cat.dislikes %></td>
                 </tr>
                 <br>
                 <tr>
                     <td> <%= cat.owner %></td>
-                    <td> <%= moment(Cat.createdAt).fromNow() %></td>
-                    <td> <%= moment(Cat.updatedAt).fromNow() %></td>
-                    <td> <a href="/cat/edit?id=<%= Cat._id %>">Edit</a></td>
-                    <td> <a href="/cat/delete?id=<%= Cat._id %>">Delete</a></td>
+                    <td> <%= moment(cat.createdAt).fromNow() %></td>
+                    <td> <%= moment(cat.updatedAt).fromNow() %></td>
+                    <td> <a href="/cat/edit?id=<%= cat._id %>">Edit</a></td>
+                    <td> <a href="/cat/delete?id=<%= cat._id %>">Delete</a></td>
             
                 </tr>
             <% }) %>
