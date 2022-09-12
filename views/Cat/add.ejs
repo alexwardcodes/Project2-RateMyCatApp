@@ -111,7 +111,7 @@
                 <select name="user[]" multiple="multiple" class="form-control users-form">
             
                     <% users.forEach(function(user) {     %> 
-                        <option value="<%= user._id %>" > <%= user.name %> </option>
+                        <option value="<%= user._id %>" > <%= user.firstName + " " + user.lastName %> </option>
                     <% }) %>
             
                 </select>

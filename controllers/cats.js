@@ -54,7 +54,7 @@ exports.cat_create_post = (req, res) => {
 exports.cat_index_get = (req, res) => {
     Cat.find().populate('user')
     .then(cats => {
-        res.render("cat/index", {cats: cats, moment}) // Cats: Cats, moment: moment
+        res.render("cat/index", {cats, moment}) // Cats: Cats, moment: moment
     })
     .catch(err => {
         console.log(err);

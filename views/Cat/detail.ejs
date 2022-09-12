@@ -4,7 +4,7 @@
 <nav> 
      <div class="flex-container">
         <div class="second-nav"></div>
-        <div class="main-nav">
+        <div class="main-nav pad">
             <!-- IMAGE PLACE HOLDER -->
 <div>
     Image: <%= cat.image %>
@@ -36,19 +36,19 @@
 </div>
 
 <div>
-    CreatedAt: <%= moment(cat.createdAt).fromNow() %>
+    Joined: <%= moment(cat.createdAt).fromNow() %>
 </div>
 
 <div>
-   UpdatedAt: <%= moment(cat.updatedAt).fromNow() %>
+   Last updated: <%= moment(cat.updatedAt).fromNow() %>
 </div>
 
 <br>
 
 <% cat.user.forEach(function(user) { %>
 
-<div> Owner: <%= user.name %></div>
-<div> CreatedAt: <%= moment(user.createdAt).fromNow() %></div>
+<div> Owner: <%= user.firstName + " " + user.lastName %></div>
+<div> Joined: <%= moment(user.createdAt).fromNow() %></div>
 <hr>
 
 <% }) %>
