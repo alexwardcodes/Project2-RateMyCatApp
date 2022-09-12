@@ -17,7 +17,6 @@
                 </div>
             </div>
 
-            
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Photo</label>
                 <div class="col-sm-10">
@@ -25,6 +24,8 @@
                         <div class="form-group">
                           <input type="file" class="form-control-file" name="uploaded_file" onchange="loadFile(event)" accept="image/*">
                           <p> <img id="output" width="100" /> </p>
+
+                          
                           <script type="text/javascript">
                             var loadFile = function(event) {
                               var image = document.getElementById('output');
@@ -34,28 +35,29 @@
                                  
                         </div>
                       </form>
+
+                      <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Birth Date</label>
+                        <div class="col-sm-10">
+                             <input  type="date" class="bday" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
+        
+                        </div>
+        
+                    </div>
+        
+                    <% function calculateAge(age) { %> 
+                    <% var ageDifMs = Date.now() - age; %>
+                    <% var ageDate = new Date(ageDifMs); %>
+                    <% return Math.abs(ageDate.getUTCFullYear() - 1970); %>
+                    <% } %>
             
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Birth Date</label>
-                <div class="col-sm-10">
-                     <input  type="date" class="bday" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
-
-                </div>
-
-            </div>
-
-            <% function calculateAge(age) { %> 
-            <% var ageDifMs = Date.now() - age; %>
-            <% var ageDate = new Date(ageDifMs); %>
-            <% return Math.abs(ageDate.getUTCFullYear() - 1970); %>
-            <% } %>
-    
-
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Age <% calculateAge %></label>
-
-                
-            </div>
+        
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Age <% calculateAge %></label>
+        
+                        
+                    </div>
+        
 
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Breed</label>
@@ -103,7 +105,7 @@
                 <select name="user[]" multiple="multiple" class="form-control users-form">
             
                     <% users.forEach(function(user) {     %> 
-                        <option value="<%= user._id %>" > <%= user.name %> </option>
+                        <option value="<%= user._id %>" > <%= user.firstName + " " + user.lastName %> </option>
                     <% }) %>
             
                 </select>

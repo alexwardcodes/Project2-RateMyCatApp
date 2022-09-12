@@ -4,7 +4,7 @@
 <nav> 
      <div class="flex-container">
         <div class="second-nav"></div>
-        <div class="main-nav">
+        <div class="main-nav pad">
             <table class="table table-striped">
                 <tr>
                     <th> Cat Name </th>
@@ -34,7 +34,9 @@
                 </tr>
                 <br>
                 <tr>
-                    <td> <%= cat.owner %></td>
+                    <td> <% cat.user.forEach(function(user) { %>
+                        <%= user.firstName + " " + user.lastName %>
+                        <% }) %>
                     <td> <%= moment(cat.createdAt).fromNow() %></td>
                     <td> <%= moment(cat.updatedAt).fromNow() %></td>
                     <td> <a href="/cat/edit?id=<%= cat._id %>">Edit</a></td>

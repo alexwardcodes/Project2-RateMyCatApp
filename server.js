@@ -2,7 +2,7 @@ const express = require("express");
 
 require("dotenv").config();
 
-const multer  = require('multer');
+const multer  = require("multer");
 
 const flash = require("connect-flash");
 
@@ -12,15 +12,20 @@ const PORT = process.env.PORT;
 
 const app = express();
 
-const upload = multer({ dest: "./public/uploads"})
-app.post('/stats', upload.single('uploaded_file'), function (req, res) {
-   console.log(req.file, req.body)
-});
 
-//image upload with multer
+      // MUTLER
+      const multer = require('multer');
+      const upload = multer({dest:'public/images/user_photos'}).single("demo_image");
 
-    app.post('/profile', upload.single('avatar'), function (req, res, next) {
-    })
+      app.post("/image", (req, res) => {
+        upload(req, res, (err) => {
+        if(err) {
+          res.status(400).send("Something went wrong!");
+        }
+        res.send(req.file);
+      });
+      });
+
 
 
 app.use(flash());
