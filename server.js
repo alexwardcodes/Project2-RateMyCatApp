@@ -13,19 +13,23 @@ const PORT = process.env.PORT;
 const app = express();
 
 
-      // MUTLER
-      const multer = require('multer');
-      const upload = multer({dest:'public/images/user_photos'}).single("demo_image");
+      // MULTER
 
-      app.post("/image", (req, res) => {
-        upload(req, res, (err) => {
-        if(err) {
-          res.status(400).send("Something went wrong!");
-        }
-        res.send(req.file);
-      });
-      });
+    const fileStorageEnginer = multer.diskStorage({
+      destination: (req, file, cb) => {
+        cb(null, './public/images/uploads')
+      },
+      filename: (req, file, cb) => {
+        cb(null, Date.now() + '-' + file.originalname)
+      }
 
+    })
+    const upload = multer({storage: fileStorageEnginer })
+
+    app.post('/single', upload.single('image'), (req, res) => {
+      console.log(req.file);
+      res.send('uploade succesful');
+    });
 
 
 app.use(flash());
