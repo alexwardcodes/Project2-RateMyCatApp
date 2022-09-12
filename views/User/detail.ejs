@@ -1,16 +1,13 @@
-<div>
-
-  <div>
-    <h3> User Details</h3>
-  </div>
-
+<div class="title"> <h1> User Details </h1> </div>
+  <br>
+  <div class="pad">
+  <div class="main-nav">
   <div>First Name: <%= user.firstName %></div>
   <div>Last Name: <%= user.lastName %></div>
   <div>Email Address: <%= user.emailAddress %></div>
-  <div> Location: <%= user.Location %></div>
+  <div> Location: <%= user.location %></div>
   <div> Bio: <%= user.bio %></div>
   <div>Created At: <%= moment(user.createdAt).fromNow() %></div>
-
 
   <br />
 
@@ -22,4 +19,4 @@
   </div>
   <% }) %>
 </div>
-
+</div>
