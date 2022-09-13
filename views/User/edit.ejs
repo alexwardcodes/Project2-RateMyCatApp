@@ -1,9 +1,10 @@
 <div class="title"> <h1> Edit User Information </h1> </div>
 
 <br>
+<div class="second-nav"></div>
+<br>
 <nav> 
      <div class="flex-container">
-        <div class="second-nav"></div>
         <div class="main-nav pad">
             <form method="POST" action="/user/update?_method=PUT">
 
@@ -87,7 +88,8 @@
                 </div>
                 
                 <input type="hidden" name="id" value="<%= user._id %>"/>
-                <button type="submit" class="btn btn-primary"> Update User Information </button>
+                <br>
+                <button type="submit" class="btn btn-primary space-btn"> Update User Information </button>
             
             </form>
        </div>
