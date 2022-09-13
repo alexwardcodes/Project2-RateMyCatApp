@@ -17,7 +17,7 @@ const app = express();
 
     const fileStorageEngine = multer.diskStorage({
       destination: (req, file, cb) => {
-        cb(null, './public/images/uploads')
+        cb(null, './public/uploads')
       },
       filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname)
