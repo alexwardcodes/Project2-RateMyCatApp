@@ -75,6 +75,22 @@ exports.cat_show_get = (req, res) => {
     })
 }
 
+exports.cat_show_post = (req, res) => {
+    console.log(req.body.id);
+    console.log(req.body.vol);
+    // Find the Cat by ID
+    Cat.findById(req.body.id)
+    .then((cat) => {
+        cat.rating.push(parseInt(req.body.vol));
+        cat.save();
+        res.redirect("/cat/index");
+    })
+    .catch(err => {
+        console.log(err)
+    });
+   
+}
+
 
 // HTTP DELETE - Cat
 exports.cat_delete_get = (req, res) => {
