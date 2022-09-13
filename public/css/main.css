@@ -7,15 +7,17 @@ body {
 }
 
 .title {
-    background-color: cornsilk;
+    /* background-color: cornsilk; */
+    background-color: white;
     text-align: center;
     font-size: 50px;
     padding-top: 20px;
     width: 1000px;
     height: 100px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     margin: auto;
-    opacity: 90%;
+    opacity: 80%;
+    border: 1px solid rgb(171, 171, 171)
 }
 
 .flex-container {
@@ -31,7 +33,10 @@ body {
     height: 550px;
     /* background-color: coral;
     background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%); */
-    border-radius: 15px;
+    /* border-radius: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin: auto;
     opacity: 80%;
 }
@@ -55,44 +60,48 @@ body {
 .second-nav {
     width: 1000px;
     height: 50px;
-    background-color: cornsilk;
-    border-radius: 15px;
+    background-color: white;
+    /* border-radius: 15px; */
     margin: auto;
     opacity: 80%;
 }
 
-footer {
-    background-color: cornsilk;
-    text-align: center;
+.footer {
+    /* background-color: cornsilk; */
+    background-color: white;
+    text-align: center !important;
     font-size: x-large;
     padding-top: 35px;
     width: 1000px;
-    height: 100px;
-    border-radius: 15px;
+    /* height: 100px; */
+    height: 60px;
+    /* border-radius: 15px; */
     margin: auto;
     opacity: 80%;
 }
 
 .catWindow {
     width: 1000px;
-    height: 550;
-    display: flex !important;;
-    flex-wrap: wrap !important;;
+    height: 600;
+    /* display: flex !important;;
+    flex-wrap: wrap !important;; */
 }
 
 .catFooter {
-    background-color: cornsilk !important;
-    opacity: 0% !important;
-}
+    /* background-color: cornsilk; */
+    background-color: white;
+    opacity: 80%;
 
-/* .w3-container {
-    display: grid !important;
-    grid-template-columns: 60% 40% !important;
-} */
+}
 
 .w3-card-4 {
-    background-color: cornsilk;
-    display: flex;
+    background-color: white;
+    /* display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start; */
 }
+
+.clear {
+    clear: both;
+    }

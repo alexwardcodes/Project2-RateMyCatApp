@@ -11,16 +11,18 @@
 
             <div class="w3-container"></div> <a href="/cat/detail?id=<%= cat._id %>"></a>
               
-                <div class="w3-card-4" style="width:50%">
+                <div class="w3-card-4" style="width:25%">
                 <a href="/cat/detail?id=<%= cat._id %>">
                   <img src="..<%= cat.image %>" alt="<%= cat.name %>" style="width:100%" />
                 </a>
                   <!-- <div class="w3-container w3-center"> -->
-                    <p class="catFooter"></p><h3><%= cat.name %></h3> <h5> Rating: <%= cat.rating %></h5></p>
+                    <div class="catFooter">
+                    <h3><%= cat.name %></h3>
+                    <h5>Rating: <%= cat.rating %></h5>
+                    </div>
                   </div>
                   <% }) %> 
-            <br>
-            <br>
+                </div>
         </div>
         </div>
     </div>
