@@ -21,29 +21,21 @@
                     <th> Delete </th>
                 </tr>
             
-            <% cats.forEach(function(cat){ %>  
+                <% cats.forEach(function(cat){ %>  
+                    <tr>
+                        <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
+                        <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
+                        <td> <%= cat.image %></td>  
                 <tr>
                     <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
-<<<<<<< HEAD
-                    <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
-                    <td> <%= cat.image %></td>  
-=======
                     <td> <img src="../images/user_photos/<%= cat.image %>" width="50" height="50"/></td>
->>>>>>> 0a6f5330f8720cd5a8b2039f446422698ff16f77
                     <td> <%= cat.age %></td>
                     <td> <%= cat.breed %></td>
                     <td> <%= cat.likes %></td>
                     <td> <%= cat.dislikes %></td>
-<<<<<<< HEAD
-                </tr>
-                <br>
-                <tr>
-                    <td> <%= cat.owner %></td>
-=======
                     <td> <% cat.user.forEach(function(user) { %>
                         <%= user.firstName + " " + user.lastName %>
                         <% }) %>
->>>>>>> 0a6f5330f8720cd5a8b2039f446422698ff16f77
                     <td> <%= moment(cat.createdAt).fromNow() %></td>
                     <td> <%= moment(cat.updatedAt).fromNow() %></td>
                     <td> <%= cat.rating %></td>

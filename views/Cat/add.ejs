@@ -19,9 +19,11 @@
 
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Photo</label>
-                    <input type="file" name="image" onchange="loadFile(event)" accept="image/*"/> 
+                <div class="col-sm-10">
+                    <input type="file" id="photo" name="image" onchange="loadFile(event)" accept="image/*"/> 
                     <p> <img id="output" width="100"/> </p>
-
+                    </div>
+                    
                     <script type="text/javascript">
                         var loadFile = function(event) {
                           var image = document.getElementById('output');
@@ -104,14 +106,8 @@
                 </select>
                 </div>
             </div>
-<<<<<<< HEAD
             <input type="submit" name="Create Cat" class="btn btn-primary cat-btn"/>
         
-=======
-            <button type="submit" class="btn btn-primary">
-                Create Cat
-            </button>
->>>>>>> 0a6f5330f8720cd5a8b2039f446422698ff16f77
             
         </form>
        </div>
