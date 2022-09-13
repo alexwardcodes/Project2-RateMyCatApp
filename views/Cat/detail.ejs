@@ -16,11 +16,11 @@
 <!-- IMAGE PLACE HOLDER -->
 
 <!-- RATINGS SLIDER -->
-<form action="/cat/index" method="get">
+<form action="/cat/index" method="GET">
     <label for="vol">Rating (1 - 10):</label>
-    <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value)"/>
+    <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value); console.log(typeof vol.value)"/>
   <output></output> &nbsp;
-    <input type="submit" value="Submit" onclick="cat.rating.push(vol.value); console.log(cat.rating)">
+    <input type="submit" value="Submit" onsubmit="cat.rating.push(parseInt(vol.value))">
 
 <div>
     Age: <%= cat.age %>
@@ -28,6 +28,10 @@
 
 <div>
     Breed: <%= cat.breed %>
+</div>
+
+<div>
+    Rating: <%= cat.rating %> 
 </div>
 
 <div>
