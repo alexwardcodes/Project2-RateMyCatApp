@@ -15,7 +15,7 @@ const app = express();
 
       // MULTER
 
-    const fileStorageEnginer = multer.diskStorage({
+    const fileStorageEngine = multer.diskStorage({
       destination: (req, file, cb) => {
         cb(null, './public/images/uploads')
       },
@@ -24,7 +24,7 @@ const app = express();
       }
 
     })
-    const upload = multer({storage: fileStorageEnginer })
+    const upload = multer({storage: fileStorageEngine })
 
     app.post('/single', upload.single('image'), (req, res) => {
       console.log(req.file);
