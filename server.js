@@ -2,7 +2,7 @@ const express = require("express");
 
 require("dotenv").config();
 
-const multer  = require('multer');
+const multer  = require("multer");
 
 const flash = require("connect-flash");
 
@@ -12,32 +12,24 @@ const PORT = process.env.PORT;
 
 const app = express();
 
-const upload = multer({ dest: './public/data/uploads/' })
-app.post('/stats', upload.single('uploaded_file'), function (req, res) {
-   console.log(req.file, req.body)
-});
 
-//image upload with multer
+      // MULTER
 
-    app.post('/profile', upload.single('avatar'), function (req, res, next) {
-    //   // req.file is the `avatar` file
-    //   // req.body will hold the text fields, if there were any
+    const fileStorageEngine = multer.diskStorage({
+      destination: (req, file, cb) => {
+        cb(null, './public/uploads')
+      },
+      filename: (req, file, cb) => {
+        cb(null, Date.now() + '-' + file.originalname)
+      }
+
     })
+    const upload = multer({storage: fileStorageEngine })
 
-    app.post('/photos/upload', upload.array('photos', 12), function (req, res, next) {
-      // req.files is array of `photos` files
-      // req.body will contain the text fields, if there were any
-    })
-
-    const cpUpload = upload.fields([{ name: 'gallery', maxCount: 100 }])
-    app.post('/cool-profile', cpUpload, function (req, res, next) {
-      // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
-      //
-      // e.g.
-      //  req.files['gallery'] -> Array
-      //
-      // req.body will contain the text fields, if there were any
-    })
+    app.post('/single', upload.single('image'), (req, res) => {
+      console.log(req.file);
+      res.send('uploade succesful');
+    });
 
 
 app.use(flash());
@@ -51,7 +43,7 @@ const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 const userRouter = require("./routes/users");
-// const authRouter = require("./routes/auth");
+const locationRouter = require("./routes/location");
 
 // app.use(express.static("public"));
 app.use(expressLayouts);
@@ -80,7 +72,7 @@ app.use(expressLayouts);
 app.use("/", indexRouter);
 app.use("/", catRouter);
 app.use("/", userRouter);
-// app.use("/", authRouter);
+app.use("/", locationRouter);
 
 app.set("view engine", "ejs");
 

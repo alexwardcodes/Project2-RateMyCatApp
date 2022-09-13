@@ -12,7 +12,7 @@ const catSchema = mongoose.Schema({
         ref: 'User'
     }],
     image: String,
-    rating: Number,
+    rating: [],
 }, { timestamps: true })
 
 const Cat = mongoose.model("Cat", catSchema);

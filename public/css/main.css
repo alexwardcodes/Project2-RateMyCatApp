@@ -29,8 +29,8 @@ body {
 .main-nav {
     width: 700px;
     height: 550px;
-    background-color: coral;
-    background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%);
+    /* background-color: coral;
+    background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%); */
     border-radius: 15px;
     margin: auto;
     opacity: 80%;
@@ -48,15 +48,14 @@ body {
     height: 40px;
 }
 
-.cat-btn {
+.space-btn {
    margin-left: 275px;
 }
 
 .second-nav {
-    width: 200px;
-    height: 550px;
+    width: 1000px;
+    height: 50px;
     background-color: coral;
-    background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%);
     border-radius: 15px;
     margin: auto;
     opacity: 80%;
