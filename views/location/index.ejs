@@ -4,12 +4,24 @@
     <nav> 
         <div class="flex-container">
            <div class="main-nav pad">
-            <a href="/cat/index" class="btn btn-outline-primary">Cats</a>
-            <a href="/cat/add" class="btn btn-outline-primary">Add Cat</a>
     
             <a href="/location/index" class="btn btn-outline-primary">Locations</a>
-            <a href="/location/edit" class="btn btn-outline-primary">Add Location</a>
     
+            <table class="table table-striped">
+                <tr>
+                    <th> Locations </th>
+                </tr>
+            
+                <% users.forEach(function(user){ %>  
+                    <tr>
+                    <td> <h3><%= user.location %></h3> </a> </td>
+            
+                </tr>
+            <% }) %>
+            
+            
+            </table>
+
         </div>
         </div>
     

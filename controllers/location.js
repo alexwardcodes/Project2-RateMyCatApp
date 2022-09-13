@@ -1,6 +1,7 @@
 // Require Models
 const {Cat} = require("../models/Cat");
 const {Location} = require("../models/Location");
+const {User} = require("../models/User");
 
 // Require Moment Library
 const moment = require('moment');
@@ -37,9 +38,9 @@ exports.location_create_post = (req, res) => {
 
 // HTTP GET - Location Index API
 exports.location_index_get = (req, res) => {
-    Location.find()
-    .then(locations => {
-        res.render("location/index", {locations: locations, moment}) // locations: locations, moment: moment
+    User.find()
+    .then(users => {
+        res.render("location/index", {users: users, moment}) // locations: locations, moment: moment
     })
     .catch(err => {
         console.log(err);
