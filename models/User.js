@@ -13,7 +13,11 @@ const userSchema = mongoose.Schema({
         required: true,
         minlength: [3, "Your last name must be more than 3 characters"]
     },
-    emailAddress: String,
+    emailAddress: {
+        type: String,
+        required: true, 
+        unique: true,
+    },
     password: {
          type: String,
          required: true,
