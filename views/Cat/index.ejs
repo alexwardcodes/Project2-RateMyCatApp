@@ -1,10 +1,11 @@
 
 <div class="title"> <h1> Cats </h1> </div>
     <br>
+    <div class="second-nav"></div>
+<br>
 <nav> 
      <div class="flex-container">
-        <div class="second-nav"></div>
-        <div class="main-nav">
+        <div class="main-nav pad">
             <table class="table table-striped">
                 <tr>
                     <th> Cat Name </th>
@@ -12,12 +13,10 @@
                     <th> Breed </th>
                     <th> Likes </th>
                     <th> Dislikes </th>
-                </tr>
-                <br>
-                <tr>
                     <th> Owner </th>
                     <th> Created At </th>
                     <th> Updated At </th>
+                    <th> Rating </th>
                     <th> Edit </th>
                     <th> Delete </th>
                 </tr>
@@ -25,18 +24,29 @@
             <% cats.forEach(function(cat){ %>  
                 <tr>
                     <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
+<<<<<<< HEAD
                     <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
                     <td> <%= cat.image %></td>  
+=======
+                    <td> <img src="../images/user_photos/<%= cat.image %>" width="50" height="50"/></td>
+>>>>>>> 0a6f5330f8720cd5a8b2039f446422698ff16f77
                     <td> <%= cat.age %></td>
                     <td> <%= cat.breed %></td>
                     <td> <%= cat.likes %></td>
                     <td> <%= cat.dislikes %></td>
+<<<<<<< HEAD
                 </tr>
                 <br>
                 <tr>
                     <td> <%= cat.owner %></td>
+=======
+                    <td> <% cat.user.forEach(function(user) { %>
+                        <%= user.firstName + " " + user.lastName %>
+                        <% }) %>
+>>>>>>> 0a6f5330f8720cd5a8b2039f446422698ff16f77
                     <td> <%= moment(cat.createdAt).fromNow() %></td>
                     <td> <%= moment(cat.updatedAt).fromNow() %></td>
+                    <td> <%= cat.rating %></td>
                     <td> <a href="/cat/edit?id=<%= cat._id %>">Edit</a></td>
                     <td> <a href="/cat/delete?id=<%= cat._id %>">Delete</a></td>
             

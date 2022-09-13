@@ -13,14 +13,6 @@ const PORT = process.env.PORT;
 const app = express();
 
 
-      // MULTER
-
-    // app.post('/single', upload.single('image'), (req, res) => {
-    //   console.log(req.file);
-    //   res.send('upload succesful');
-    // });
-
-
 app.use(flash());
 
 app.use(express.static("public"));
