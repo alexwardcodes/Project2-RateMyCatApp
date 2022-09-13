@@ -49,8 +49,8 @@ const authRouter = require("./routes/auth");
 // app.use(express.static("public"));
 app.use(expressLayouts);
 
-// let session = require('express-session');
-// let passport = require('./helper/ppConfig');
+let session = require('express-session');
+let passport = require('./helper/ppConfig');
 
 // app.use(session({
 //   secret: process.env.SECRET,
@@ -69,7 +69,6 @@ app.use(expressLayouts);
 // })
 
 // Mount routes here
-// app.use("/", authRouter);
 app.use("/", indexRouter);
 app.use("/", catRouter);
 app.use("/", userRouter);

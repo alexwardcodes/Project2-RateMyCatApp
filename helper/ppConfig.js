@@ -1,3 +1,4 @@
+// Require Passport
 const passport = require("passport");
 
 const LocalStrategy = require('passport-local').Strategy;
@@ -31,4 +32,5 @@ passport.use(new LocalStrategy({
     }
   ));
 
+// Export Passport Middleware
 module.exports = passport;

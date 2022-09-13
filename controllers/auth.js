@@ -2,8 +2,8 @@
 
 // let passport = require("../helper/ppConfig");
 
-const bcrypt = require("bcrypt");
-const salt = 10
+// const bcrypt = require("bcrypt");
+// const salt = 10
 
 // need to create a user to sign up
 exports.auth_signup_get = (req, res) => {
@@ -12,10 +12,11 @@ exports.auth_signup_get = (req, res) => {
 
 exports.auth_signup_post = (req, res) => {
      let user = new User(req.body);
-    let hash = bcrypt.hashSync(req.body.password, 10)
-    console.log(hash);
-    
-    user.password = hash;
+
+     console.log(req.body.password);
+    // let hash = bcrypt.hashSync(req.body.password, salt);
+    // console.log(hash);
+    // user.password = hash;
 
     user.save()
     .then(() => {
