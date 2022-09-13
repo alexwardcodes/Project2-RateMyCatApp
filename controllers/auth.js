@@ -32,16 +32,16 @@ exports.auth_signup_post = (req, res) => {
      res.render("auth/signin");
 }
 
-// exports.auth_signin_post = (req, res) => {
-//     function (emailAddress, password, done) {
-//         User.findOne({ emailAddress: emailAddress }, function (err, user) {
-//           if (err) { return done(err); }
-//           if (!user) { return done(null, false); }
-//           if (!user.verifyPassword(password)) { return done(null, false); }
-//           return done(null, user);
-//         });
-//       }
-// }
+exports.auth_signin_post = (req, res) => {
+    function checksignin(emailAddress, password, done) {
+        User.findOne({ emailAddress: emailAddress }, function (err, user) {
+          if (err) { return done(err); }
+          if (!user) { return done(null, false); }
+          if (!user.verifyPassword(password)) { return done(null, false); }
+          return done(null, user);
+        });
+      }
+}
 
 // exports.auth_logout_get = (req, res) => {
 //     req.logout(function(err) {
