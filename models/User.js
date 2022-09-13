@@ -19,7 +19,10 @@ const userSchema = mongoose.Schema({
          required: true,
          minlength: [8, "Your password is too weak"]
     },
-    location: String,
+    location: {
+        type: String,
+        required: true,
+    },
     bio: String,
     cat: [{
         type: mongoose.Schema.Types.ObjectId,
