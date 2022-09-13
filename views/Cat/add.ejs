@@ -1,5 +1,5 @@
 
-<div class="title"> <h1> <h1> Add Cat </h1> </h1> </div>
+<div class="title"> <h1> Add Cat </h1> </div>
 <br>
 <div class="second-nav"></div>
 <br>
@@ -8,7 +8,7 @@
 <nav> 
     <div class="flex-container">
        <div class="main-nav pad">
-        <form method="POST" action="/cat/add">
+        <form method="POST" action="/cat/add" enctype="multipart/form-data">
 
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Cat Name</label>
@@ -19,11 +19,11 @@
 
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Photo</label>
-                <form action="/single" method="POST" enctype="multipart/form-data" >
-                    <input type="file" name="image" onchange="loadFile(event)"/>
-                    <!-- accept="image/*"/>  -->
+                <div class="col-sm-10">
+                    <input type="file" id="photo" name="image" onchange="loadFile(event)" accept="image/*"/> 
                     <p> <img id="output" width="100"/> </p>
-
+                    </div>
+                    
                     <script type="text/javascript">
                         var loadFile = function(event) {
                           var image = document.getElementById('output');
@@ -31,7 +31,7 @@
                         };
                       </script>
 
-                    
+
                       <div class="mb-3 row">
                         <label class="col-sm-2 col-form-label">Birth Date</label>
                         <div class="col-sm-10">
@@ -106,11 +106,10 @@
                 </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">
-                Create Cat
-            </button>
+            <input type="submit" name="Create Cat" class="btn btn-primary cat-btn"/>
+        
             
-            </form>
+        </form>
        </div>
    </div>
 

@@ -1,4 +1,4 @@
-<div class="title"> <h1> Edit Cat </h1> </div>
+<div class="title"> <h1> Edit <%= cat.name %> </h1> </div>
     <br>
     <div class="second-nav"></div>
 <br>
@@ -6,11 +6,15 @@
      <div class="flex-container">
         <div class="main-nav">
             <form method="POST" action="/cat/update?_method=PUT">
+            <br>
 
-                <div>
-                    <label>Cat Name</label>
-                    <input name="name" type="text" value="<%= cat.name %>" />
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Cat Name</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" value="<%= cat.name %>" class="form-control"/>
                 </div>
+                <br>
+                <br>
             
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label">Photo</label>
@@ -26,15 +30,27 @@
                           </script>
                     </div>
                 </div>
+                <br>
+                <br>
             
                 <div>
-                    <label>Birth Date</label>
-                    <input type="date" type="month" id="bdaymonth" name="age">
+                    <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Birth Date</label>
+                    <div class="col-sm-10">
+                    <input type="date" type="month" id="bdaymonth" name="age" class="form-control">
+                </div>
+                <br>
+                <br>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Age</label>  
                 </div>
             
                 <div>
-                    <label>Breed</label>
-                    <select name="breed">
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Breed</label>
+                        <div class="col-sm-10">
+                        <select name="breed" class="form-control">
                         <option value="">Please select an option</option>
                         <option value="britishLonghair">British Longhair</option>
                         <option value="britishShorthair">British Shorthair</option>
@@ -51,23 +67,32 @@
                         <option value="sphynx">Sphynx</option>
                         <option value="tabby">Tabby</option>
                         <option value="other">Other</option>
+                        </select>
                 </div>
+                <br>
+                <br>
             
             
-                <div>
-                    <label>Likes</label>
-                    <inpute name="likes" type="text" value="<%= cat.likes %>" />
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Likes</label>
+                    <div class="col-sm-10">
+                    <input name="likes" type="text" value="<%= cat.likes %>" class="form-control"/>
                 </div>
-            
-                <div>
-                    <label>Dislikes</label>
-                    <inpute name="dislikes" type="text" value="<%=  cat.dislikes %>" />
+                <br>
+                <br>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Dislikes</label>
+                    <div class="col-sm-10">
+                    <input name="dislikes" type="text" value="<%= cat.dislikes %>" class="form-control"/>
                 </div>
+                <br>
+                <br>
             
             
                 <input type="hidden" name="id" value="<%= cat._id %>" />
             
-                <button type="submit"> Update Cat </button>
+                <input type="submit" name="Update Cat" class="btn btn-primary cat-btn"/>
             
             </form>
 
