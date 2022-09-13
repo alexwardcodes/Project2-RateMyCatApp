@@ -9,7 +9,6 @@
             <table class="table table-striped">
                 <tr>
                     <th> Cat Name </th>
-                    <th> Image </th>
                     <th> Age </th>
                     <th> Breed </th>
                     <th> Likes </th>
@@ -22,7 +21,11 @@
                     <th> Delete </th>
                 </tr>
             
-            <% cats.forEach(function(cat){ %>  
+                <% cats.forEach(function(cat){ %>  
+                    <tr>
+                        <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
+                        <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
+                        <td> <%= cat.image %></td>  
                 <tr>
                     <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
                     <td> <img src="../images/user_photos/<%= cat.image %>" width="50" height="50"/></td>

@@ -28,8 +28,11 @@ exports.cat_create_post = (req, res) => {
 
     // Saving the data into the Database
 
+    console.log(req.body)
+    console.log(req.file)
     let cat = new Cat(req.body);
-
+    let imagePath = '/uploads/' + req.file.filename;
+    cat.image = imagePath
     cat.save()
     .then(() => {
 

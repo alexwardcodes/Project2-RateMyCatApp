@@ -13,25 +13,6 @@ const PORT = process.env.PORT;
 const app = express();
 
 
-      // MULTER
-
-    const fileStorageEngine = multer.diskStorage({
-      destination: (req, file, cb) => {
-        cb(null, './public/uploads')
-      },
-      filename: (req, file, cb) => {
-        cb(null, Date.now() + '-' + file.originalname)
-      }
-
-    })
-    const upload = multer({storage: fileStorageEngine })
-
-    app.post('/single', upload.single('image'), (req, res) => {
-      console.log(req.file);
-      res.send('uploade succesful');
-    });
-
-
 app.use(flash());
 
 app.use(express.static("public"));
@@ -44,7 +25,7 @@ const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 const userRouter = require("./routes/users");
 const locationRouter = require("./routes/location");
-const authRouter = require("./routes/");
+const authRouter = require("./routes/auth");
 
 // app.use(express.static("public"));
 app.use(expressLayouts);
