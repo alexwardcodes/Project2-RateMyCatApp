@@ -4,11 +4,10 @@
 <nav> 
      <div class="flex-container">
         <div class="second-nav"></div>
-        <div class="main-nav pad">
+        <div class="main-nav">
             <table class="table table-striped">
                 <tr>
                     <th> Cat Name </th>
-                    <th> Image </th>
                     <th> Age </th>
                     <th> Breed </th>
                     <th> Likes </th>
@@ -26,7 +25,8 @@
             <% cats.forEach(function(cat){ %>  
                 <tr>
                     <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
-                    <td> <%= cat.image %></td>
+                    <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
+                    <td> <%= cat.image %></td>  
                     <td> <%= cat.age %></td>
                     <td> <%= cat.breed %></td>
                     <td> <%= cat.likes %></td>
@@ -34,9 +34,7 @@
                 </tr>
                 <br>
                 <tr>
-                    <td> <% cat.user.forEach(function(user) { %>
-                        <%= user.firstName + " " + user.lastName %>
-                        <% }) %>
+                    <td> <%= cat.owner %></td>
                     <td> <%= moment(cat.createdAt).fromNow() %></td>
                     <td> <%= moment(cat.updatedAt).fromNow() %></td>
                     <td> <a href="/cat/edit?id=<%= cat._id %>">Edit</a></td>
