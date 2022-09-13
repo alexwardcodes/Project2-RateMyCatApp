@@ -7,19 +7,20 @@
 
 // need to create a user to sign up
 exports.auth_signup_get = (req, res) => {
-    res.render("/auth/signup");
+    res.render("auth/signup");
 }
 
 exports.auth_signup_post = (req, res) => {
-    let user = new User(req.body);
+     let user = new User(req.body);
+
     console.log(req.body.password); 
 //    let hash = bcrypt.hashSync(req.body.password, salt);
 //    console.log(hash);
 //    user.password = hash;
-  user.save()
-   .then(() => {
+    user.save()
+    .then(() => {
         res.redirect("/");
-   })
+    })
     .catch((err) => {
        console.log(err);
          res.send("Please try again later.")
@@ -27,9 +28,9 @@ exports.auth_signup_post = (req, res) => {
  }
 
 
-// exports.auth_signin_get = (req, res) => {
-//     res.render("auth/signin");
-// }
+ exports.auth_signin_get = (req, res) => {
+     res.render("auth/signin");
+}
 
 // exports.auth_signin_post = (req, res) => {
 //     function (emailAddress, password, done) {
