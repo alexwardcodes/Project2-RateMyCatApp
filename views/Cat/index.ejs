@@ -5,46 +5,26 @@
 <nav> 
      <div class="flex-container">
         <div class="main-nav pad">
-            <table class="table table-striped">
-                <tr>
-                    <th> Cat Name </th>
-                    <th> Image </th>
-                    <th> Age </th>
-                    <th> Breed </th>
-                    <th> Likes </th>
-                    <th> Dislikes </th>
-                    <th> Owner </th>
-                    <th> Joined </th>
-                    <th> Updated </th>
-                    <th> Rating </th>
-                    <th> Edit </th>
-                    <th> Delete </th>
-                </tr>
-            
-                <% cats.forEach(function(cat){ %>  
-                    <tr>
-                    <td> <a href="/cat/detail?id=<%= cat._id %>"> <h3><%= cat.name %></h3> </a> </td>
-                    <td> <img src="..<%= cat.image %>" height="auto" width="60%"/></td>
-                    <td> <%= cat.age %></td>
-                    <td> <%= cat.breed %></td>
-                    <td> <%= cat.likes %></td>
-                    <td> <%= cat.dislikes %></td>
-                    <td> <% cat.user.forEach(function(user) { %>
-                        <%= user.firstName + " " + user.lastName %>
-                        <% }) %>
-                    <td> <%= moment(cat.createdAt).fromNow() %></td>
-                    <td> <%= moment(cat.updatedAt).fromNow() %></td>
-                    <td> <%= cat.rating %></td>
-                    <td> <a href="/cat/edit?id=<%= cat._id %>">Edit</a></td>
-                    <td> <a href="/cat/delete?id=<%= cat._id %>">Delete</a></td>
-            
-                </tr>
-            <% }) %>
-            
-            
-            </table>
+            <div class="catWindow"></div>
+
+            <% cats.forEach(function(cat){ %>  
+
+            <div class="w3-container"></div> <a href="/cat/detail?id=<%= cat._id %>"></a>
+              
+                <div class="w3-card-4" style="width:50%">
+                <a href="/cat/detail?id=<%= cat._id %>">
+                  <img src="..<%= cat.image %>" alt="<%= cat.name %>" style="width:100%" />
+                </a>
+                  <!-- <div class="w3-container w3-center"> -->
+                    <p class="catFooter"></p><h3><%= cat.name %></h3> <h5> Rating: <%= cat.rating %></h5></p>
+                  </div>
+                  <% }) %> 
+            <br>
+            <br>
+        </div>
         </div>
     </div>
 
 </div>  
 </nav>
+          

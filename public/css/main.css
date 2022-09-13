@@ -72,3 +72,27 @@ footer {
     margin: auto;
     opacity: 80%;
 }
+
+.catWindow {
+    width: 1000px;
+    height: 550;
+    display: flex !important;;
+    flex-wrap: wrap !important;;
+}
+
+.catFooter {
+    background-color: cornsilk !important;
+    opacity: 0% !important;
+}
+
+/* .w3-container {
+    display: grid !important;
+    grid-template-columns: 60% 40% !important;
+} */
+
+.w3-card-4 {
+    background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
