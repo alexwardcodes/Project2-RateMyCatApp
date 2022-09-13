@@ -17,53 +17,43 @@
                 </div>
             </div>
 
-            
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Photo</label>
-                <div class="col-sm-10">
-                    <form action="/stats" enctype="multipart/form-data" method="post">
-                        <div class="form-group">
-                          <input type="file" class="form-control-file" name="uploaded_file" onchange="loadFile(event)" accept="image/*">
-                          <p><img id="output" width="100" /></p>
-                          <script type="text/javascript">
-                            var loadFile = function(event) {
-                              var image = document.getElementById('output');
-                              image.src = URL.createObjectURL(event.target.files[0]);
-                            };
-                          </script>
-                                 
+                <form action="/single" method="POST" enctype="multipart/form-data" >
+                    <input type="file" name="image" onchange="loadFile(event)"/>
+                    <!-- accept="image/*"/>  -->
+                    <p> <img id="output" width="100"/> </p>
+
+                    <script type="text/javascript">
+                        var loadFile = function(event) {
+                          var image = document.getElementById('output');
+                          image.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                      </script>
+
+                    
+                      <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Birth Date</label>
+                        <div class="col-sm-10">
+                             <input  type="date" class="bday" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
+        
                         </div>
-                      </form>
-
-            <!-- cats need to be stored in images/uploads  -->
-
+        
+                    </div>
+        
+                    <% function calculateAge(age) { %> 
+                    <% var ageDifMs = Date.now() - age; %>
+                    <% var ageDate = new Date(ageDifMs); %>
+                    <% return Math.abs(ageDate.getUTCFullYear() - 1970); %>
+                    <% } %>
             
-                <!-- compare current date and birth date -->
-    
-                <% function getYearDiffWithMonth(startDate, endDate) { %>
-                <%   const ms = endDate.getTime() - startDate.getTime(); %>
-                
-                <%  const date = new Date(ms); %>
-                
-                <%  return Math.abs(date.getUTCFullYear() - 1970); %>
-                <% } %>
-
-                <% console.log(getYearDiffWithMonth(new Date('1999-09-24'), new Date('2022-01-17')),); %>
-                
-                <!-- ----------------------------------------------------------------------------------------------- -->
-            
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Birth Date</label>
-                <div class="col-sm-10">
-                     <input  type="date" class="bdaymonth" name="age" max="3000-01-01" class="form-control" onfocus="this.max=new Date().toISOString().split('T')[0]"  min="2000-01-01">
-
-                </div>
-
-            </div>
-
-            <!-- <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Age</label>
-            </div> -->
+        
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Age <% calculateAge %></label>
+        
+                        
+                    </div>
+        
 
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">Breed</label>
@@ -103,8 +93,7 @@
                 <input name="dislikes" type="text" class="form-control" />
                 </div>
             </div>
-            
-            
+
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label">User</label>
                 <div class="col-sm-10">

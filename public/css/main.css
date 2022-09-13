@@ -29,8 +29,8 @@ body {
 .main-nav {
     width: 700px;
     height: 550px;
-    background-color: coral;
-    background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%);
+    /* background-color: coral;
+    background: linear-gradient(to bottom, #ff6600 0%, cornsilk 100%); */
     border-radius: 15px;
     margin: auto;
     opacity: 80%;
