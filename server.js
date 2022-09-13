@@ -52,15 +52,16 @@ app.use(expressLayouts);
 let session = require('express-session');
 let passport = require('./helper/ppConfig');
 
-// app.use(session({
-//   secret: process.env.SECRET,
-//   saveUninitialized: true,
-//   resave: false,
-//   cookie: {maxAge: 3600000}
-// }))
+app.use(session({
+  secret: process.env.SECRET,
+  saveUninitialized: true,
+  resave: false,
+  cookie: {maxAge: 3600000}
+}))
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+// Initiialze passport and passport session
+app.use(passport.initialize());
+app.use(passport.session());
 
 // app.use(function(req, res, next) {
 //   res.locals.currentUser = req.user;
