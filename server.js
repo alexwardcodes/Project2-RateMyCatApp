@@ -51,6 +51,7 @@ const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 const userRouter = require("./routes/users");
+const authRouter = require("./routes/auth");
 
 // app.use(express.static("public"));
 app.use(expressLayouts);
