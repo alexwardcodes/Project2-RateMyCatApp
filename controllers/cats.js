@@ -84,7 +84,9 @@ exports.cat_show_post = (req, res) => {
     // Find the Cat by ID
     Cat.findById(req.body.id)
     .then((cat) => {
-        cat.rating.push(parseInt(req.body.vol));
+        if(!cat.rating[0]) {
+            cat.rating.push(parseInt(req.body.vol));
+        } else { cat.rating = Math.floor((cat.rating[0] + parseInt(req.body.vol)) / 2) };
         cat.save();
         res.redirect("/cat/index");
     })
