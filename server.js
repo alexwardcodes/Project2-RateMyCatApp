@@ -25,6 +25,7 @@ const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 const userRouter = require("./routes/users");
 const locationRouter = require("./routes/location");
+const leaderboardRouter = require("./routes/leaderboard");
 const authRouter = require("./routes/auth");
 
 // app.use(express.static("public"));
@@ -55,6 +56,7 @@ app.use("/", indexRouter);
 app.use("/", catRouter);
 app.use("/", userRouter);
 app.use("/", locationRouter);
+app.use("/", leaderboardRouter);
 app.use("/", authRouter);
 
 app.set("view engine", "ejs");

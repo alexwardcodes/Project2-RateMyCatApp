@@ -44,7 +44,9 @@ exports.location_index_get = (req, res) => {
     })
     .catch(err => {
         console.log(err);
-    })
+    });
+
+    
 }
 
 // HTTP GET - Location By Id
