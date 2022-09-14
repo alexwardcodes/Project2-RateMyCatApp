@@ -63,7 +63,7 @@ body {
     background-color: white;
     text-align: center !important;
     font-size: x-large;
-    padding-top: 35px;
+    padding-top: 10px;
     width: 1000px;
     /* height: 100px; */
     height: 60px;
@@ -81,6 +81,7 @@ body {
     /* background-color: cornsilk; */
     background-color: white;
     opacity: 80%;
+    text-align: center;
 }
 .w3-card-4 {
     display: flex;
