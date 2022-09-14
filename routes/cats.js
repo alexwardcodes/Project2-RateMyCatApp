@@ -22,9 +22,9 @@ var upload = multer({ storage: storage })
 const isLoggedIn = require('../helper/isLoggedIn');
 
 // Routes
-router.get("/cat/add", isLoggedIn, catCntrl.cat_create_get);
+router.get("/cat/add", /* isLoggedIn, */ catCntrl.cat_create_get);
 router.post("/cat/add", upload.single('image'), catCntrl.cat_create_post);
-router.get("/cat/index", catCntrl.cat_index_get);
+router.get("/cat/index", /* isLoggedIn, */ catCntrl.cat_index_get);
 router.get("/cat/detail", catCntrl.cat_show_get);
 router.post("/cat/detail", catCntrl.cat_show_post);
 router.get("/cat/delete", catCntrl.cat_delete_get);

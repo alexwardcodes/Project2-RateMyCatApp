@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 const authCntrl = require("../controllers/auth");
-const IsLoggedIn = require('../helper/IsLoggedIn');
+const IsLoggedIn = require('../helper/isLoggedIn');
 
 router.get("/auth/signup", authCntrl.auth_signup_get);
 router.post("/auth/signup", authCntrl.auth_signup_post);

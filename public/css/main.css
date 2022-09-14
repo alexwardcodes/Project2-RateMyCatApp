@@ -5,6 +5,7 @@ body {
     margin: auto;
     font-family: 'Amatic SC', cursive;
 }
+
 .title {
     /* background-color: cornsilk; */
     background-color: white;
@@ -82,12 +83,12 @@ body {
     opacity: 80%;
 }
 .w3-card-4 {
-    background-color: white;
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
 }
+
 .clear {
     clear: both;
     }
