@@ -20,40 +20,40 @@
     </form> -->
 
 <!-- RATINGS SLIDER -->
-<form action="/cat/detail" method="POST">
+<form action="/cat/detail" method="POST" class="details">
     <label for="vol">Rating (1 - 10):</label>
     <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value); console.log(typeof vol.value); console.log(document)"/> 
   <output></output> &nbsp;
-    <input type="submit" value="Submit" name="rating">
+    <input type="submit" value="Submit" name="rating" class="btn btn-primary cat-btn">
     <input type="hidden" name="id" value="<%= cat._id %>">
     </form>
 
 <div class="catDetails">
-<div>
+<div id="attribute">
     Age: <%= cat.age %>
 </div>
 
-<div>
+<div id="attribute">
     Breed: <%= cat.breed %>
 </div>
 
-<div>
+<div id="attribute">
     Rating: <%= cat.rating %> 
 </div>
 
-<div>
+<div id="attribute">
     Likes: <%= cat.likes %>
 </div>
 
-<div>
+<div id="attribute">
     Dislikes: <%= cat.dislikes %>
 </div>
 
-<div>
+<div id="attribute">
     Joined: <%= moment(cat.createdAt).fromNow() %>
 </div>
 
-<div>
+<div id="attribute">
    Last updated: <%= moment(cat.updatedAt).fromNow() %>
 </div>
 
@@ -61,17 +61,18 @@
 
 <% cat.user.forEach(function(user) { %>
 
-<div> Owner: <%= user.firstName + " " + user.lastName %></div>
-<div> Joined: <%= moment(user.createdAt).fromNow() %></div>
+<div id="attribute"> Owner: <%= user.firstName + " " + user.lastName %></div>
+<div id="attribute"> Joined: <%= moment(user.createdAt).fromNow() %></div>
 <hr>
 
 <% }) %>
 
     </div>
     </div>
-    <a href="/cat/edit?id=<%= cat._id %>">
+    <a href="/cat/edit?id=<%= cat._id %>" class="cat-btn" id="attribute">
         <button>Edit <%= cat.name %></button>
     </a>
+
 </div>
 </div>  
 </nav>
