@@ -1,6 +1,33 @@
-<script type="module">
+<!-- <script type="module">
     import { average } from 'https://unpkg.com/average-rating/dist/average-rating.esm.js'
     
     average([134055, 57472, 143135, 365957, 1448459])
 
-</script>
+</script> -->
+
+<div class="title"> <h1> Leaderboard </h1> </div>
+    <br>
+    <div class="second-nav"></div>
+    <br>
+    <nav> 
+    <div class="flex-container">
+       <div class="leaderboard">
+            
+        <% let order = cats.sort(function(b, a) {
+            return a.rating - b.rating;
+        });
+        cats.forEach(function(cat) { %> 
+            <div>
+                
+            <div><a href="/cat/detail?id=<%= cat._id %>">
+                <img src="..<%= cat.image %>" alt="<%= cat.name %>" style="width: 150px; height: 100px"/>
+              </a></div>
+            <div><%= cat.name %> with an average rating of <%= cat.rating %></div>
+            </div>
+            
+            
+       <%  }) %>
+
+    </div>
+</div>  
+</nav>
