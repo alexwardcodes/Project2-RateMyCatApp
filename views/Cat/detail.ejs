@@ -67,13 +67,14 @@
 <div> Owner: <%= user.firstName + " " + user.lastName %></div>
 <div> Joined: <%= moment(user.createdAt).fromNow() %></div>
 <hr>
-<!-- EDIT REMOVED FROM INDEX AND PLACED IN DETAIL -->
-<a href="/cat/edit?id=<%= cat._id %>">Edit</a>
+
 <% }) %>
 
     </div>
     </div>
+    <a href="/cat/edit?id=<%= cat._id %>">
+        <button>Edit <%= cat.name %></button>
+    </a>
 </div>
-
 </div>  
 </nav>

@@ -28,7 +28,7 @@ router.get("/cat/index", /* isLoggedIn, */ catCntrl.cat_index_get);
 router.get("/cat/detail", catCntrl.cat_show_get);
 router.post("/cat/detail", catCntrl.cat_show_post);
 router.get("/cat/delete", catCntrl.cat_delete_get);
-router.get("/cat/edit", catCntrl.cat_edit_get);
+router.get("/cat/edit", upload.single('image'), catCntrl.cat_edit_get);
 router.put("/cat/update", catCntrl.cat_update_put);
 
 

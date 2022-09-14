@@ -1,24 +1,21 @@
-<div class="title"> <h1> Cats </h1> </div>
+<div class="title"> <h1> Rateable Cats </h1> </div>
     <br>
     <div class="second-nav"></div>
 <br>
 <nav> 
-     <div class="flex-container">
+     <div class="flex-container" style="overflow-y: scroll; width:700px;">
         <div class="main-nav pad">
-            <div class="catWindow"></div>
+            <!-- <div class="catWindow" style="overflow-y: scroll; width:400px;"></div> -->
 
             <% cats.forEach(function(cat){ %>  
-
-            <div class="w3-container"></div> <a href="/cat/detail?id=<%= cat._id %>"></a>
               
-                <div class="w3-card-4" style="width:25%">
+                <div class="w3-card-4" style="width:30%">
                 <a href="/cat/detail?id=<%= cat._id %>">
                   <img src="..<%= cat.image %>" alt="<%= cat.name %>" style="width:100%" />
                 </a>
                   <!-- <div class="w3-container w3-center"> -->
                     <div class="catFooter">
                     <h3><%= cat.name %></h3>
-                    <h5>Rating: <%= cat.rating %></h5>
                     </div>
                   </div>
                   <% }) %> 
@@ -29,4 +26,3 @@
 
 </div>  
 </nav>
-          

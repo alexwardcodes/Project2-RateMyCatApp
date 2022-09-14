@@ -99,13 +99,11 @@
             
                 <input type="submit" name="Update Cat" class="btn btn-primary cat-btn"/>
 
-                <!-- DELETE BUTTON REMOVED FROM INDEX AND PLACED IN EDIT -->
-                <button>
-                <a href="/cat/delete?id=<%= cat._id %>">Delete</a>
-                </button>
-            
-            </form>
 
+            </form>
+            <a href="/cat/delete?id=<%= cat._id %>">
+                <button>Delete <%= cat.name %></button>
+                </a>
     </div>
     </div>
 
