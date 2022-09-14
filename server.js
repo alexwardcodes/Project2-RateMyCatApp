@@ -46,7 +46,6 @@ const userRouter = require("./routes/users");
 const locationRouter = require("./routes/location");
 const authRouter = require("./routes/auth");
 
-// app.use(express.static("public"));
 app.use(expressLayouts);
 
 let session = require('express-session');

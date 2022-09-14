@@ -1,4 +1,3 @@
-
 // require passport 
 const passport = require("passport");
 
@@ -9,14 +8,14 @@ const User = require('../models/User')
 
 // Serialize User- Save Data into the session
 // Unique Identifier
-passport.serializeUser(function(user,done){
+passport.serializeUser(function(user, done){
   done(null, user.id)
 })
 
 // DeSerialize User
 // Read Info from DB according to ID from session.
 passport.deserializeUser(function(user, done){
-  User.findById(id, function(err, user){
+  User.findById(user.id, function(err, user){
     done(err, user);
   })
 });
@@ -34,25 +33,6 @@ passport.use(new LocalStrategy({
     });
   }
 ));
-// const User = require('../models/User');
-
-// // Require Passport configurations
-// let passport = require("../helper/")
-
-// passport.serializeUser(function(user, done) {
-//     done(null, user.id);
-// });
-
-// passport.deserializeUser(function(id, done) {
-//     User.findById(id, function(err, user) {
-//         done(err, user);
-//     });
-// });
-
-// passport.use(new LocalStrategy({
-//     usernameField: "emailAddress",
-//     passwordField: "password"
-// },
 
 // // Export Passport Middleware
 module.exports = passport;

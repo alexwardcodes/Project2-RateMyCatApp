@@ -31,7 +31,7 @@ exports.auth_signup_post = (req, res) => {
  }
 
 // Render Sign in page
- exports.auth_signin_get = (req, res) => {
+exports.auth_signin_get = (req, res) => {
      res.render("auth/signin");
 }
 // check sign in details with ppCongfig
