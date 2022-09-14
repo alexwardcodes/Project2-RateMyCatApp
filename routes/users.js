@@ -11,10 +11,14 @@ router.use(express.urlencoded({ extended: true }));
 const userCntrl = require("../controllers/users");
 
 // IsLoggedIn middleware
-const isLoggedIn = require('../helper/isLoggedIn');
+const IsLoggedIn = require('../helper/isLoggedIn');
 
 // Routes
+<<<<<<< HEAD
 router.get("/user/add", isLoggedIn, userCntrl.user_create_get);
+=======
+router.get("/user/add", userCntrl.user_create_get);
+>>>>>>> 908288c2f3ef4372ac0e69f5c66131d13e8ebc29
 router.post("/user/add", userCntrl.user_create_post);
 router.get("/user/index", userCntrl.user_index_get);
 router.get("/user/detail", userCntrl.user_show_get);

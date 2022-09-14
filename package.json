@@ -16,6 +16,8 @@
   "dependencies": {
     "average-rating": "^2.0.3",
     "bcrypt": "^5.0.1",
+    "cjs": "^0.0.11",
+    "concat-stream": "^2.0.0",
     "connect-flash": "^0.1.1",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
@@ -28,6 +30,7 @@
     "multer": "^1.4.5-lts.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "readable-stream": "^4.1.0",
     "save": "^2.5.0",
     "sharp": "^0.31.0"
   }

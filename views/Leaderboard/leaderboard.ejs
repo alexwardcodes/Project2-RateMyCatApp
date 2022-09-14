@@ -7,13 +7,32 @@
 
 <div class="title"> <h1> Leaderboard </h1> </div>
     <br>
-    <div class="second-nav"></div>
+    <div class="second-nav">
+        <a href="/user/index" class="btn btn-outline-primary"> Users </a>
+        <a href="/user/add" class="btn btn-outline-primary"> Add User </a>
+
+        <a href="/cat/index" class="btn btn-outline-primary"> Cats</a>
+        <a href="/cat/add" class="btn btn-outline-primary"> add Cats </a>
+
+        
+            <% if(currentUser) { %>
+                Hi <%= currentUser.firstName %> <%= currentUser.lastName %>
+                <a href="/auth/logout" class="btn btn-outline-primary">Logout</a>
+
+            <% } else { %>
+                <a href="/auth/signin"  class="btn btn-outline-primary">Signin</a>
+                <a href="/auth/signup"  class="btn btn-outline-primary">Signup</a>
+            <% } %>
+        
+    </div>
     <br>
     <nav> 
     <div class="flex-container">
        <div class="leaderboard">
             
-        <% let order = cats.sort(function(b, a) {
+        <% 
+        
+        let order = cats.sort(function(b, a) {
             return a.rating - b.rating;
         });
         cats.forEach(function(cat) { %> 
@@ -22,7 +41,7 @@
             <div><a href="/cat/detail?id=<%= cat._id %>">
                 <img src="..<%= cat.image %>" alt="<%= cat.name %>" style="width: 150px; height: 100px"/>
               </a></div>
-            <div><%= cat.name %> with an average rating of <%= cat.rating %></div>
+            <div class="catFooter"><h4><%= cat.name %> - rated: <%= cat.rating  %></h4></div>
             </div>
             
             

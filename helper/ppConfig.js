@@ -6,6 +6,8 @@ const LocalStrategy = require('passport-local').Strategy;
 // Require model
 const {User} = require('../models/User')
 
+//Require Passport configurations
+
 // Serialize User- Save Data into the session
 // Unique Identifier
 passport.serializeUser(function(user, done){
