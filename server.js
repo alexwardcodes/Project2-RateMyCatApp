@@ -28,30 +28,29 @@ const locationRouter = require("./routes/location");
 const leaderboardRouter = require("./routes/leaderboard");
 const authRouter = require("./routes/auth");
 
-// app.use(express.static("public"));
 app.use(expressLayouts);
 
-// let session = require('express-session');
-// let passport = require('./helper/ppConfig');
+let session = require('express-session');
+let passport = require('./helper/ppConfig');
 
-// app.use(session({
-//   secret: process.env.SECRET,
-//   saveUninitialized: true,
-//   resave: false,
-//   cookie: {maxAge: 3600000}
-// }))
+app.use(session({
+  secret: process.env.SECRET,
+  saveUninitialized: true,
+  resave: false,
+  cookie: {maxAge: 3600000}
+}))
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+// Initiialze passport and passport session
+app.use(passport.initialize());
+app.use(passport.session());
 
-// app.use(function(req, res, next) {
-//   res.locals.currentUser = req.user;
-//   res.locals.alerts = req.flash();
-//   next();
-// })
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  // res.locals.alerts = req.flash();
+  next();
+})
 
 // Mount routes here
-// app.use("/", authRouter);
 app.use("/", indexRouter);
 app.use("/", catRouter);
 app.use("/", userRouter);
