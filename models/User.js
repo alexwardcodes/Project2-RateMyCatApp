@@ -18,11 +18,11 @@ const userSchema = mongoose.Schema({
         required: true, 
         unique: true,
     },
-    password: {
-         type: String,
-         required: true,
-         minlength: [8, "Your password is too weak"]
-    },
+    // password: {
+    //      type: String,
+    //      required: true,
+    //      minlength: [8, "Your password is too weak"]
+    // },
     location: {
         type: String,
         required: true,
