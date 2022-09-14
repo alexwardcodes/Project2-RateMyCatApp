@@ -3,7 +3,25 @@
 
 <div class="title"> <h1> User index </h1> </div>
     <br>
-<div class="second-nav"></div>
+    
+<div class="second-nav">
+    <a href="/user/index" class="btn btn-outline-primary"> Users </a>
+        <a href="/user/add" class="btn btn-outline-primary"> Add User </a>
+
+        <a href="/cat/index" class="btn btn-outline-primary"> Cats</a>
+        <a href="/cat/add" class="btn btn-outline-primary"> add Cats </a>
+
+        
+            <% if(currentUser) { %>
+                Hi <%= currentUser.firstName %> <%= currentUser.lastName %>
+                <a href="/auth/logout" class="btn btn-outline-primary">Logout</a>
+
+            <% } else { %>
+                <a href="/auth/signin"  class="btn btn-outline-primary">Signin</a>
+                <a href="/auth/signup"  class="btn btn-outline-primary">Signup</a>
+            <% } %>
+        
+</div>
 <nav> 
      <div class="flex-container">
         <div class="main-nav pad">
