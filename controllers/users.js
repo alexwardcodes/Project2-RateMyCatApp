@@ -69,7 +69,7 @@ exports.user_delete_get = (req, res) => {
 
 // HTTP GET - Load USER Edit Form
 exports.user_edit_get = (req, res) => {
-    User.findById(req.query.id)
+    User.findById(req.query.id) 
     .then((user) => {
         res.render("user/edit", {user})
     })

@@ -4,7 +4,7 @@ const passport = require("passport");
 const LocalStrategy = require('passport-local').Strategy;
 
 // Require model
-const User = require('../models/User')
+const {User} = require('../models/User')
 
 // Serialize User- Save Data into the session
 // Unique Identifier
