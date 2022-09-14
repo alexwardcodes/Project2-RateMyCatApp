@@ -19,6 +19,7 @@
     "cjs": "^0.0.11",
     "concat-stream": "^2.0.0",
     "connect-flash": "^0.1.1",
+    "dependency": "^0.0.1",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
@@ -28,10 +29,13 @@
     "moment": "^2.29.4",
     "mongoose": "^6.6.0",
     "multer": "^1.4.5-lts.1",
+    "node": "^18.9.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "readable": "^1.1.3",
     "readable-stream": "^4.1.0",
     "save": "^2.5.0",
-    "sharp": "^0.31.0"
+    "sharp": "^0.31.0",
+    "stream": "^0.0.2"
   }
 }

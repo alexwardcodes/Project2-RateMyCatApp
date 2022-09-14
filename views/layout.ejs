@@ -11,7 +11,28 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  
+    <div class="title"> <h1> <%= title %> </h1> </div>
+    <br>
+    <div class="second-nav">
+      <a href="/" class="btn btn-outline-primary"> Home </a>
+      <a href="/user/index" class="btn btn-outline-primary"> Users </a>
+      <a href="/user/add" class="btn btn-outline-primary"> Add User </a>
+      <a href="/cat/index" class="btn btn-outline-primary"> Cats</a>
+      <a href="/cat/add" class="btn btn-outline-primary"> Add Cats </a>
+      <a href="/leaderboard" class="btn btn-outline-primary"> Leaderboard </a>
+      <a href="/location/index" class="btn btn-outline-primary"> Cat Map </a>
+      
+          <% if(currentUser) { %>
+              Hi <%= currentUser.firstName %> <%= currentUser.lastName %>
+              <a href="/auth/logout" class="btn btn-outline-primary">Logout</a>
+
+          <% } else { %>
+              <a href="/auth/signin"  class="btn btn-outline-primary">Sign In</a>
+              <a href="/auth/signup"  class="btn btn-outline-primary">Sign Up</a>
+          <% } %>
+      
+  </div>
+  <br>
     <%- body %>
 
     <br>
