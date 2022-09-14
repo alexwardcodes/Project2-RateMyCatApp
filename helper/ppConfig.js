@@ -14,8 +14,8 @@ passport.serializeUser(function(user, done){
 
 // DeSerialize User
 // Read Info from DB according to ID from session.
-passport.deserializeUser(function(user, done){
-  User.findById(user.id, function(err, user){
+passport.deserializeUser(function(id, done){
+  User.findById(id, function(err, user){
     done(err, user);
   })
 });
