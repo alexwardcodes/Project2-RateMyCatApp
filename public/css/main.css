@@ -62,9 +62,7 @@ body {
     border: 5px black;
     
 }
-.team-parent {
-    width: 33%;
-}
+
 .col-sm-10 {
     max-width: 500px;
 }
@@ -213,8 +211,16 @@ body {
     align-items: center;
 } */
 
-.pad-team-parent {
+.team-parent {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 33%;
+    align-items: center;
+ }
+
+ @media screen and (max-width: 600px) {
+    img.team {
+        width: 80px;
+        height: 100px;
+    }
  }
