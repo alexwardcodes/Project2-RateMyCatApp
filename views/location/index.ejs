@@ -12,7 +12,8 @@
 
         <% users.forEach(function(user){ %>
         <tr>
-          <td><h3><%= user.location %> <%= user.cat %></h3></td>
+          <td><h3><%= user.location %> </h3></td>
+          <td><%= user.cat.name %></td>
         </tr>
         <% }) %>
       </table>
