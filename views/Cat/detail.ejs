@@ -3,7 +3,6 @@
 <nav> 
      <div class="flex-container">
         <div class="main-nav pad">
-            <div id="catDetails">
     
 <div id="catImage">
     <img src="..<%= cat.image %>" height="auto" width="50%"/>
@@ -21,7 +20,7 @@
     </form> -->
 
 <!-- RATINGS SLIDER -->
-<form action="/cat/detail" method="POST" id="formDetails">
+<form action="/cat/detail" method="POST" class="details">
     <label for="vol" id="rating">Rating (1 - 10):</label>
     <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value); console.log(typeof vol.value); console.log(document)"/> 
   <output id="rating"></output> &nbsp;

@@ -129,6 +129,7 @@ body {
     color: white;
     font-weight: bolder;
     font-size: larger;
+
 }
 
 .table { 
@@ -140,8 +141,8 @@ body {
 .catDetails {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;   */
-    align-items: center;
+    justify-content: center;  
+    /* align-items: baseline; */
     
 }
 
@@ -162,10 +163,9 @@ body {
 }
 
 #formDetails {
-    width: 20%;
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;
 }
 
