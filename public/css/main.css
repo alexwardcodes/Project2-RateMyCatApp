@@ -34,7 +34,6 @@ body {
     border-radius: 15px;
 }
 .main-nav {
-    /* background-image: url("https://previews.123rf.com/images/mintrau/mintrau1909/mintrau190900014/129394500-cute-cat-illustration-pattern-background-wallpaper-.jpg"); */
     min-height: 550px;
     display: flex;
     flex-wrap: wrap;
@@ -184,7 +183,7 @@ body {
 }
 
 #rating {
-    color: white;
+    color: black;
     font-size: 25px;
 }
 
@@ -204,3 +203,15 @@ body {
     color: black
 }
 
+/* .us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+} */
+
+.pad-team-parent {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+ }
