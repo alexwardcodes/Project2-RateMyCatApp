@@ -43,7 +43,7 @@ exports.auth_signin_post = passport.authenticate('local', {
  exports.auth_logout_get = (req, res) => {
     req.logout(function(err) {
         if(err) {return next(err);}
-        // req.flash("success", "You have been logged out successfully")
+        req.flash("success", "You've logged out from RateMyCats.")
         res.redirect("/auth/signin");
     })
 }
