@@ -4,8 +4,8 @@
      <div class="flex-container">
         <div class="main-nav pad">
     
-<div>
-    <img src="..<%= cat.image %>" height="auto" width="50%"/>
+<div id="catImage">
+    <img src="..<%= cat.image %>" height="auto" width="70%"/>
 
 </div>
 
@@ -20,40 +20,40 @@
     </form> -->
 
 <!-- RATINGS SLIDER -->
-<form action="/cat/detail" method="POST" class="details">
-    <label for="vol">Rating (1 - 10):</label>
+<form action="/cat/detail" method="POST" class="rating">
+    <label for="vol" id="rating">Rating (1 - 10):</label>
     <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value); console.log(typeof vol.value); console.log(document)"/> 
-  <output></output> &nbsp;
-    <input type="submit" value="Submit" name="rating" class="btn btn-primary cat-btn">
+  <output id="rating"></output> &nbsp;
+    <input type="submit" value="Submit Vote" name="rating" class="btn btn-primary cat-btn" id="submitbtn">
     <input type="hidden" name="id" value="<%= cat._id %>">
     </form>
 
-<div class="catDetails">
-<div id="attribute">
+<div class="catDetails" id="attribute">
+<div>
     Age: <%= cat.age %>
 </div>
 
-<div id="attribute">
+<div>
     Breed: <%= cat.breed %>
 </div>
 
-<div id="attribute">
+<div>
     Rating: <%= cat.rating %> 
 </div>
 
-<div id="attribute">
+<div>
     Likes: <%= cat.likes %>
 </div>
 
-<div id="attribute">
+<div>
     Dislikes: <%= cat.dislikes %>
 </div>
 
-<div id="attribute">
+<div>
     Joined: <%= moment(cat.createdAt).fromNow() %>
 </div>
 
-<div id="attribute">
+<div>
    Last updated: <%= moment(cat.updatedAt).fromNow() %>
 </div>
 
@@ -61,17 +61,17 @@
 
 <% cat.user.forEach(function(user) { %>
 
-<div id="attribute"> Owner: <%= user.firstName + " " + user.lastName %></div>
-<div id="attribute"> Joined: <%= moment(user.createdAt).fromNow() %></div>
-<hr>
+<div> Owner: <%= user.firstName + " " + user.lastName %></div>
+<div> Joined: <%= moment(user.createdAt).fromNow() %></div>
+
+<a href="/cat/edit?id=<%= cat._id %>" id="attribute" class="btn btn-primary cat-btn">
+    Edit <%= cat.name %>
+</a>
 
 <% }) %>
 
     </div>
     </div>
-    <a href="/cat/edit?id=<%= cat._id %>" class="cat-btn" id="attribute">
-        <button>Edit <%= cat.name %></button>
-    </a>
 
 </div>
 </div>  
