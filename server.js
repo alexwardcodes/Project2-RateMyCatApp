@@ -69,5 +69,5 @@ mongoose.connect(
 );
 
 app.listen(PORT, () => {
-  console.log(`RateMyCat is running on port ${PORT}`);;
+  console.log(`RateMyCat is running on port ${PORT}`);
 });
