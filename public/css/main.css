@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/lazy_cat.jpg');
+    background-color: #1b4a6b;
     background-size: cover;
     padding: 20px;
     margin: auto;
@@ -15,12 +15,14 @@ body {
     width: 1000px;
     height: 100px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     border: 1px solid rgb(171, 171, 171);
     max-width: 100%;
     justify-content: center;
 }
 .flex-container {
+    background-image: url('/images/vectorstock_4687675.jpg');
+    background-size: cover;
     min-height: min-content;
     display: flex;
     flex-direction: row;
@@ -29,24 +31,28 @@ body {
     margin: auto;
     max-width: 100%;
     justify-content: center;
+    border-radius: 15px;
 }
 .main-nav {
+    /* background-image: url("https://previews.123rf.com/images/mintrau/mintrau1909/mintrau190900014/129394500-cute-cat-illustration-pattern-background-wallpaper-.jpg"); */
     min-height: 550px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     max-width: 100%;
     justify-content: center;
     background-size: cover;
+
+
 }
 .pad {
     padding: 10px;
 }
 
 .info {
-    color: white;
+    color: black;
     font-size: 40px;
     text-align: center;
 }
@@ -54,7 +60,7 @@ body {
     height: 200px;
     width: 150px;
     margin: 30px;
-    border: 5px white solid;
+    border: 5px black;
     
 }
 .team-parent {
@@ -75,7 +81,7 @@ body {
     background-color: white;
     border-radius: 15px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -91,7 +97,7 @@ body {
     width: 1000px;
     height: 60px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     max-width: 100%;
     justify-content: center;
 }
@@ -103,7 +109,7 @@ body {
 }
 .catFooter {
     background-color: white;
-    opacity: 80%;
+    /* opacity: 80%; */
     text-align: center;
 }
 .w3-card-4 {
@@ -117,7 +123,7 @@ body {
     clear: both;
     }
 
-.leaderboard {
+/* .leaderboard {
     max-width: 100%;
     justify-content: center;
     display: flex;
@@ -126,7 +132,7 @@ body {
     gap: 20px;
     align-content: center;
     margin: 0 auto;
-}
+} */
 
 .cat-btn {
     display: flex;
@@ -144,7 +150,7 @@ body {
 }
 
 #attribute {
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: larger;
 
@@ -167,7 +173,7 @@ body {
 #catImage {
     display: flex;
     justify-content: center;
-    opacity: 100%;
+    opacity: 100% !important;
 }
 
 #rating {
@@ -184,5 +190,9 @@ body {
 }
 
 #tableText {
-    color: white;
+    color: black;
+}
+
+#welcomeMessage {
+    color: black
 }
