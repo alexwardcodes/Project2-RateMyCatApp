@@ -15,13 +15,13 @@ body {
     width: 1000px;
     height: 100px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     border: 1px solid rgb(171, 171, 171);
     max-width: 100%;
     justify-content: center;
 }
 .flex-container {
-    background-image: url("https://img.freepik.com/premium-vector/cute-cat-seamless-pattern-background-cute-seamless-cat-pattern-design_266639-1583.jpg?w=1480");
+    background-image: url("https://cdn.vectorstock.com/i/1000x1000/76/75/cat-seamless-pattern-background-vector-4687675.webp");
     min-height: min-content;
     display: flex;
     flex-direction: row;
@@ -30,6 +30,7 @@ body {
     margin: auto;
     max-width: 100%;
     justify-content: center;
+    border-radius: 15px;
 }
 .main-nav {
     /* background-image: url("https://previews.123rf.com/images/mintrau/mintrau1909/mintrau190900014/129394500-cute-cat-illustration-pattern-background-wallpaper-.jpg"); */
@@ -42,13 +43,15 @@ body {
     max-width: 100%;
     justify-content: center;
     background-size: cover;
+
+
 }
 .pad {
     padding: 10px;
 }
 
 .info {
-    color: white;
+    color: black;
     font-size: 40px;
     text-align: center;
 }
@@ -56,7 +59,7 @@ body {
     height: 200px;
     width: 150px;
     margin: 30px;
-    border: 5px white solid;
+    border: 5px black;
     
 }
 .team-parent {
@@ -77,7 +80,7 @@ body {
     background-color: white;
     border-radius: 15px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -93,7 +96,7 @@ body {
     width: 1000px;
     height: 60px;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     max-width: 100%;
     justify-content: center;
 }
@@ -105,7 +108,7 @@ body {
 }
 .catFooter {
     background-color: white;
-    opacity: 80%;
+    /* opacity: 80%; */
     text-align: center;
 }
 .w3-card-4 {
@@ -146,7 +149,7 @@ body {
 }
 
 #attribute {
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: larger;
 
@@ -186,7 +189,7 @@ body {
 }
 
 #tableText {
-    color: white;
+    color: black;
 }
 
 #welcomeMessage {
