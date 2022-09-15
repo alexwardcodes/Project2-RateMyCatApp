@@ -9,8 +9,8 @@
           <th id="tableText">Last Name</th>
           <th id="tableText">Email Address</th>
           <th id="tableText">Location</th>
-          <th id="tableText">Bio</th>
-          <th id="tableText">Created At</th>
+          <!-- <th id="tableText">Bio</th> -->
+          <th id="tableText">Joined</th>
         </tr>
        
         <% users.forEach(function(user){ %>
@@ -23,7 +23,7 @@
           </td>
           <td id="tableText"></div><%= user.emailAddress %></td>
           <td id="tableText"><%= user.location %></td>
-          <td id="tableText"><%= user.bio %></td>
+          <!-- <td id="tableText"><%= user.bio %></td> -->
           <td id="tableText"><%= moment(user.createdAt).fromNow() %></td>
         </tr>
         <% }) %>

@@ -163,7 +163,7 @@ body {
 }
 
 .table { 
-   
+    max-width: 500px;
     justify-content: center;
     color: white;
     margin: auto;
