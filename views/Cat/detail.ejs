@@ -3,8 +3,9 @@
 <nav> 
      <div class="flex-container">
         <div class="main-nav pad">
+            <div id="catDetails">
     
-<div>
+<div id="catImage">
     <img src="..<%= cat.image %>" height="auto" width="50%"/>
 
 </div>
@@ -20,11 +21,11 @@
     </form> -->
 
 <!-- RATINGS SLIDER -->
-<form action="/cat/detail" method="POST" class="details">
-    <label for="vol">Rating (1 - 10):</label>
+<form action="/cat/detail" method="POST" id="formDetails">
+    <label for="vol" id="rating">Rating (1 - 10):</label>
     <input type="range" id="vol" name="vol" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value; console.log(vol.value); console.log(typeof vol.value); console.log(document)"/> 
-  <output></output> &nbsp;
-    <input type="submit" value="Submit" name="rating" class="btn btn-primary cat-btn">
+  <output id="rating"></output> &nbsp;
+    <input type="submit" value="Submit Vote" name="rating" class="btn btn-primary cat-btn" id="submitbtn">
     <input type="hidden" name="id" value="<%= cat._id %>">
     </form>
 
@@ -63,15 +64,15 @@
 
 <div id="attribute"> Owner: <%= user.firstName + " " + user.lastName %></div>
 <div id="attribute"> Joined: <%= moment(user.createdAt).fromNow() %></div>
-<hr>
+
+<a href="/cat/edit?id=<%= cat._id %>" id="attribute" class="btn btn-primary cat-btn">
+    Edit <%= cat.name %>
+</a>
 
 <% }) %>
 
     </div>
     </div>
-    <a href="/cat/edit?id=<%= cat._id %>" class="cat-btn" id="attribute">
-        <button>Edit <%= cat.name %></button>
-    </a>
 
 </div>
 </div>  
