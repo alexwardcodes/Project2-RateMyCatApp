@@ -16,7 +16,7 @@ exports.cat_create_get = (req, res) => {
     // res.render("Cat/add");
     User.find()
     .then((users) => {
-        res.render("cat/add", {users})
+        res.render("Cat/add", {users})
     })
     .catch((err) => {
         console.log(err);
@@ -44,7 +44,7 @@ exports.cat_create_post = (req, res) => {
                 user.save();
             })
         });
-        res.redirect("/cat/index");
+        res.redirect("/Cat/index");
     })
     .catch((err) => {
         console.log(err);
@@ -57,7 +57,7 @@ exports.cat_create_post = (req, res) => {
 exports.cat_index_get = (req, res) => {
     Cat.find().populate('user')
     .then(cats => {
-        res.render("cat/index", {cats, moment}) // Cats: Cats, moment: moment
+        res.render("Cat/index", {cats, moment}) // Cats: Cats, moment: moment
     })
     .catch(err => {
         console.log(err);
@@ -71,7 +71,7 @@ exports.cat_show_get = (req, res) => {
     // Find the Cat by ID
     Cat.findById(req.query.id).populate('user')
     .then(cat => {
-        res.render("cat/detail", {cat, moment}) // Cat: Cat, moment: moment
+        res.render("Cat/detail", {cat, moment}) // Cat: Cat, moment: moment
     })
     .catch(err => {
         console.log(err)
@@ -88,7 +88,7 @@ exports.cat_show_post = (req, res) => {
             cat.rating.push(parseInt(req.body.vol));
         } else { cat.rating = Math.floor((cat.rating[0] + parseInt(req.body.vol)) / 2) };
         cat.save();
-        res.redirect("/cat/index");
+        res.redirect("/Cat/index");
     })
     .catch(err => {
         console.log(err)
@@ -103,7 +103,7 @@ exports.cat_delete_get = (req, res) => {
 
     Cat.findByIdAndDelete(req.query.id)
     .then(() => {
-        res.redirect("/cat/index");
+        res.redirect("/Cat/index");
     })
     .catch(err => {
         console.log(err);
@@ -116,7 +116,7 @@ exports.cat_delete_get = (req, res) => {
 exports.cat_edit_get = (req, res) => {
     Cat.findById(req.query.id)
     .then((cat) => {
-        res.render("cat/edit", {cat})
+        res.render("Cat/edit", {cat})
     })
     .catch(err => {
         console.log(err);
@@ -129,7 +129,7 @@ exports.cat_update_put = (req, res) => {
 
     Cat.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
-        res.redirect("/cat/index");
+        res.redirect("/Cat/index");
     })
     .catch(err => {
         console.log(err)
