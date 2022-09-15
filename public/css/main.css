@@ -136,13 +136,19 @@ body {
 
 .cat-btn {
     display: flex;
-    justify-content: center;
+    /* justify-content: center;
+    align-self: center; */
     width: auto;
     height: auto;
     margin: 20px;
     text-align: center;
 }
 
+#submitbtn {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
 
 #delete {
     background-color: red;
@@ -166,6 +172,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;  
+    margin-left: 20px;
     /* align-items: baseline; */
     
 }
@@ -196,3 +203,4 @@ body {
 #welcomeMessage {
     color: black
 }
+

@@ -66,8 +66,8 @@
 
 
 
-<% console.log(currentUser._id + "is currentUser", user._id + "is user");
-if(currentUser._id == user._id ) { %>
+<% console.log(currentUser._id + "is currentUser", cat.user._id + "is user");
+if (currentUser._id == user._id ) { %>
     <a href="/cat/edit?id=<%= cat._id %>" id="attribute" class="btn btn-primary cat-btn">
         Edit <%= cat.name %>
     </a>
