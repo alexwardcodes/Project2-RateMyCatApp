@@ -7,17 +7,18 @@ body {
 }
 
 .title {
-    /* background-color: cornsilk; */
     background-color: white;
     text-align: center;
     font-size: 50px;
     padding-top: 20px;
     width: 1000px;
     height: 100px;
-    /* border-radius: 15px; */
     margin: auto;
     opacity: 80%;
-    border: 1px solid rgb(171, 171, 171)
+    border: 1px solid rgb(171, 171, 171);
+    /* mobile */
+    max-width: 100%;
+    justify-content: center;
 }
 .flex-container {
     display: flex;
@@ -25,18 +26,21 @@ body {
     width: 1100px;
     min-height: 550px;
     margin: auto;
+    /* mobile*/
+    max-width: 100%;
+    justify-content: center;
 }
 .main-nav {
-    width: 700px;
-    min-height: 550px;
-    /* background-color: coral;
-    background: linear-gradient(to bottom, #FF6600 0%, cornsilk 100%); */
-    /* border-radius: 15px; */
+    /* width: 700px;
+    min-height: 550px; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: auto;
     opacity: 80%;
+    max-width: 100%;
+    justify-content: center;
+    background-size: cover;
 }
 .pad {
     padding: 10px;
@@ -52,26 +56,28 @@ body {
 }
 .second-nav {
     width: 1000px;
-    height: 50px;
+    min-height: 50px;
     background-color: white;
     /* border-radius: 15px; */
     margin: auto;
     opacity: 80%;
     text-align: center;
     padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 100%;
+    justify-content: center;
 }
 .footer {
-    /* background-color: cornsilk; */
     background-color: white;
     text-align: center !important;
     font-size: x-large;
     padding-top: 10px;
     width: 1000px;
-    /* height: 100px; */
     height: 60px;
-    /* border-radius: 15px; */
     margin: auto;
     opacity: 80%;
+    max-width: 100%;
+    justify-content: center;
 }
 .catWindow {
     width: 1000px;
@@ -80,7 +86,6 @@ body {
     flex-wrap: wrap !important;; */
 }
 .catFooter {
-    /* background-color: cornsilk; */
     background-color: white;
     opacity: 80%;
     text-align: center;
@@ -100,5 +105,27 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.cat-btn {
+    display: flex;
     justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 20px;
+    text-align: center;
+}
+
+
+#delete {
+    background-color: red;
+    border: 3px solid red;
+}
+
+#attribute {
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
 }

@@ -29,7 +29,7 @@
     "moment": "^2.29.4",
     "mongoose": "^6.6.1",
     "multer": "^1.4.5-lts.1",
-    "node": "^18.9.0",
+    "node-modules": "^0.0.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "readable": "^1.1.3",

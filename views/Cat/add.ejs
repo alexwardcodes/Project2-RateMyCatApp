@@ -1,5 +1,5 @@
 
-<% title = "Add Cat" %>
+<% title = "Add A Cat" %>
 
 <nav> 
     <div class="flex-container">
@@ -7,14 +7,14 @@
         <form method="POST" action="/cat/add" enctype="multipart/form-data">
 
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Cat Name</label>
+                <label class="col-sm-2 col-form-label" id="attribute">Cat Name</label>
                 <div class="col-sm-10">
                     <input name="name" type="text" class="form-control"/>
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Photo</label>
+                <label class="col-sm-2 col-form-label" id="attribute">Photo</label>
                 <div class="col-sm-10">
                     <input type="file" id="photo" name="image" onchange="loadFile(event)" accept="image/*"/> 
                     <p> <img id="output" width="100"/> </p>
@@ -51,14 +51,14 @@
                     </div> -->
         
                     <div class="mb-3 row">
-                        <label class="col-sm-2 col-form-label">Age</label>
+                        <label class="col-sm-2 col-form-label" id="attribute">Age</label>
                         <div class="col-sm-10">
                         <input name="age" type="text" class="form-control" />
                         </div>
                     </div>
 
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Breed</label>
+                <label class="col-sm-2 col-form-label" id="attribute">Breed</label>
                 <div class="col-sm-10">
                 <select name="breed" class="form-control">
                     <option value="">Please select an option</option>
@@ -83,21 +83,21 @@
     
             
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Likes</label>
+                <label class="col-sm-2 col-form-label" id="attribute">Likes</label>
                 <div class="col-sm-10">
                 <input name="likes" type="text" class="form-control" />
                 </div>
             </div>
             
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Dislikes</label>
+                <label class="col-sm-2 col-form-label" id="attribute">Dislikes</label>
                 <div class="col-sm-10">
                 <input name="dislikes" type="text" class="form-control" />
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">User</label>
+                <label class="col-sm-2 col-form-label" id="attribute">User</label>
                 <div class="col-sm-10">
                 <select name="user[]" multiple="multiple" class="form-control users-form">
             
