@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/lazy_cat.jpg');
+    background-color: #1b4a6b;
     background-size: cover;
     padding: 20px;
     margin: auto;
@@ -20,6 +20,7 @@ body {
     justify-content: center;
 }
 .flex-container {
+    background-image: url("https://img.freepik.com/premium-vector/cute-cat-seamless-pattern-background-cute-seamless-cat-pattern-design_266639-1583.jpg?w=1480");
     min-height: min-content;
     display: flex;
     flex-direction: row;
@@ -30,12 +31,13 @@ body {
     justify-content: center;
 }
 .main-nav {
+    /* background-image: url("https://previews.123rf.com/images/mintrau/mintrau1909/mintrau190900014/129394500-cute-cat-illustration-pattern-background-wallpaper-.jpg"); */
     min-height: 550px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: auto;
-    opacity: 80%;
+    /* opacity: 80%; */
     max-width: 100%;
     justify-content: center;
     background-size: cover;
@@ -99,7 +101,7 @@ body {
     clear: both;
     }
 
-.leaderboard {
+/* .leaderboard {
     max-width: 100%;
     justify-content: center;
     display: flex;
@@ -108,7 +110,7 @@ body {
     gap: 20px;
     align-content: center;
     margin: 0 auto;
-}
+} */
 
 .cat-btn {
     display: flex;
@@ -149,7 +151,7 @@ body {
 #catImage {
     display: flex;
     justify-content: center;
-    opacity: 100%;
+    opacity: 100% !important;
 }
 
 #rating {
@@ -167,4 +169,8 @@ body {
 
 #tableText {
     color: white;
+}
+
+#welcomeMessage {
+    color: black
 }
