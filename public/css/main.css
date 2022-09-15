@@ -176,7 +176,7 @@ body {
 }
 
 #rating {
-    color: white;
+    color: black;
     font-size: 25px;
 }
 
@@ -196,9 +196,15 @@ body {
     color: black
 }
 
-.pad-team-parent {
-    max-width: fit-content;
+/* .us {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    align-items: center;
 }
+
+.pad-team-parent {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+ } */
