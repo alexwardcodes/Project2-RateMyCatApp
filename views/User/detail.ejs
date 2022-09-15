@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <% title = "Account Details" %>
-=======
-
-<% title = "User Details" %>
->>>>>>> 6b4444dd132764f6f5af6e2c8ff708257fdb4d73
 
 <nav>
   <div class="flex-container">
@@ -15,7 +10,8 @@
         <div>Location: <%= user.location %></div>
         <div>Bio: <%= user.bio %></div>
         <div>Joined: <%= moment(user.createdAt).fromNow() %></div>
-
+        <div><a href="/user/edit?id=<%= user._id %>">Edit</a></div>
+        <div><a href="/user/delete?id=<%= user._id %>">Delete</a></div>     
         <br />
 
         <% user.cat.forEach(function(cat) { %>

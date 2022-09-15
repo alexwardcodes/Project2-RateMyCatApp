@@ -45,7 +45,7 @@ exports.user_show_get = (req, res) => {
     // Find the User by ID
     User.findById(req.query.id).populate('cat')
     .then(user => {
-        res.render("User/detail", {user, moment}) 
+        res.render("User/detail", {user: user, moment}) 
     })
     .catch(err => {
         console.log(err)
