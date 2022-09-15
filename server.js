@@ -27,11 +27,13 @@ const userRouter = require("./routes/users");
 const locationRouter = require("./routes/location");
 const leaderboardRouter = require("./routes/leaderboard");
 const authRouter = require("./routes/auth");
+const infoRouter = require("./routes/info");
 
 app.use(expressLayouts);
 
 let session = require('express-session');
 let passport = require('./helper/ppConfig');
+const { request } = require("express");
 
 app.use(session({
   secret: process.env.SECRET,
@@ -57,6 +59,7 @@ app.use("/", userRouter);
 app.use("/", locationRouter);
 app.use("/", leaderboardRouter);
 app.use("/", authRouter);
+app.use("/", infoRouter);
 
 app.set("view engine", "ejs");
 
