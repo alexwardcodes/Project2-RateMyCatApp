@@ -1,5 +1,4 @@
-
-<% title = "User Details" %>
+<% title = "Account Details" %>
 
 <nav>
   <div class="flex-container">
@@ -11,7 +10,8 @@
         <div>Location: <%= user.location %></div>
         <div>Bio: <%= user.bio %></div>
         <div>Joined: <%= moment(user.createdAt).fromNow() %></div>
-
+        <div><a href="/user/edit?id=<%= user._id %>">Edit</a></div>
+        <div><a href="/user/delete?id=<%= user._id %>">Delete</a></div>     
         <br />
 
         <% user.cat.forEach(function(cat) { %>

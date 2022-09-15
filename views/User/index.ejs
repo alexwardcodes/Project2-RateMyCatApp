@@ -1,4 +1,4 @@
-<% title = "User Index" %>
+<% title = "Ailurophiles (fancyspeak for Cat Lover)" %>
 
 <nav>
   <div class="flex-container">
@@ -11,8 +11,6 @@
           <th id="tableText">Location</th>
           <th id="tableText">Bio</th>
           <th id="tableText">Created At</th>
-          <th id="tableText">Edit</th>
-          <th id="tableText">Delete</th>
         </tr>
        
         <% users.forEach(function(user){ %>
@@ -27,8 +25,6 @@
           <td id="tableText"><%= user.location %></td>
           <td id="tableText"><%= user.bio %></td>
           <td id="tableText"><%= moment(user.createdAt).fromNow() %></td>
-          <td><a href="/user/edit?id=<%= user._id %>">Edit</a></td>
-          <td><a href="/user/delete?id=<%= user._id %>">Delete</a></td>
         </tr>
         <% }) %>
       </table>

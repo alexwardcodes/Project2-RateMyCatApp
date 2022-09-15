@@ -45,7 +45,7 @@ exports.user_show_get = (req, res) => {
     // Find the User by ID
     User.findById(req.query.id).populate('cat')
     .then(user => {
-        res.render("User/detail", {user, moment}) 
+        res.render("User/detail", {user: user, moment}) 
     })
     .catch(err => {
         console.log(err)
@@ -69,7 +69,7 @@ exports.user_delete_get = (req, res) => {
 
 // HTTP GET - Load USER Edit Form
 exports.user_edit_get = (req, res) => {
-    User.findById(req.query.id)
+    User.findById(req.query.id) 
     .then((user) => {
         res.render("User/edit", {user})
     })
