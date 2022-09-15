@@ -1,29 +1,21 @@
 <% title = "Locations" %>
 
-    <nav> 
-        <div class="flex-container">
-           <div class="main-nav pad">
-    
-            <a href="/location/index" class="btn btn-outline-primary">Locations</a>
-    
-            <table class="table table-striped">
-                <tr>
-                    <th> Locations </th>
-                </tr>
-            
-                <% users.forEach(function(user){ %>  
-                    <tr>
-                    <td> <h3><%= user.location %> <%= user.cat %> </h3> </a> </td>
-            
-                </tr>
-            <% }) %>
-            
+<nav>
+  <div class="flex-container">
+    <div class="main-nav pad">
+      <a href="/location/index" class="btn btn-outline-primary">Locations</a>
 
-            
-            </table>
+      <table class="table table-striped">
+        <tr>
+          <th>Locations</th>
+        </tr>
 
-        </div>
-        </div>
-    
-    </div>  
-
+        <% users.forEach(function(user){ %>
+        <tr>
+          <td><h3><%= user.location %> <%= user.cat %></h3></td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>
+</nav>

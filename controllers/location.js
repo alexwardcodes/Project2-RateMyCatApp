@@ -38,7 +38,7 @@ exports.location_create_post = (req, res) => {
 
 // HTTP GET - Location Index API
 exports.location_index_get = (req, res) => {
-    User.find()
+    User.find().populate('cat')
     .then(users => {
         res.render("location/index", {users: users, moment}) // locations: locations, moment: moment
     })
