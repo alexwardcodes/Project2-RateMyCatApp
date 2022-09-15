@@ -21,7 +21,8 @@ body {
     justify-content: center;
 }
 .flex-container {
-    background-image: url("https://cdn.vectorstock.com/i/1000x1000/76/75/cat-seamless-pattern-background-vector-4687675.webp");
+    background-image: url('/images/vectorstock_4687675.jpg');
+    background-size: cover;
     min-height: min-content;
     display: flex;
     flex-direction: row;
