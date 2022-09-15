@@ -7,6 +7,7 @@ body {
 }
 
 .title {
+    border-radius: 15px;
     background-color: white;
     text-align: center;
     font-size: 50px;
@@ -56,6 +57,9 @@ body {
     border: 5px white solid;
     
 }
+.team-parent {
+    width: 33%;
+}
 .col-sm-10 {
     max-width: 500px;
 }
@@ -69,7 +73,7 @@ body {
     width: 1000px;
     min-height: 50px;
     background-color: white;
-    /* border-radius: 15px; */
+    border-radius: 15px;
     margin: auto;
     opacity: 80%;
     text-align: center;
@@ -80,6 +84,7 @@ body {
 }
 .footer {
     background-color: white;
+    border-radius: 15px;
     text-align: center !important;
     font-size: x-large;
     padding-top: 10px;
