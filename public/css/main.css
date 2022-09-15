@@ -20,6 +20,7 @@ body {
     justify-content: center;
 }
 .flex-container {
+    min-height: min-content;
     display: flex;
     flex-direction: row;
     width: 1000px;
@@ -29,8 +30,7 @@ body {
     justify-content: center;
 }
 .main-nav {
-    /* width: 700px;
-    min-height: 550px; */
+    min-height: 550px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -149,6 +149,7 @@ body {
 #catImage {
     display: flex;
     justify-content: center;
+    opacity: 100%;
 }
 
 #rating {
@@ -156,11 +157,6 @@ body {
     font-size: 25px;
 }
 
-#submitbtn {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;  */
-}
 
 #formDetails {
     max-width: fit-content;
@@ -169,3 +165,6 @@ body {
     justify-content: center; 
 }
 
+#tableText {
+    color: white;
+}
