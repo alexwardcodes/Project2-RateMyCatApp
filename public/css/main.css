@@ -201,10 +201,10 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-}
+} */
 
 .pad-team-parent {
     display: flex;
     flex-direction: column;
     max-width: 100%;
- } */
+ }
