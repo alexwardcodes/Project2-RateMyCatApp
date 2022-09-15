@@ -1,14 +1,13 @@
 <% title = "Cats" %>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
 <nav>
-  <div class="flex-container" style="overflow-y: scroll; width: 700px">
+  <div class="flex-container" style="overflow-y: scroll; width: 1000px">
     <div class="main-nav pad">
-      <!-- <div class="catWindow" style="overflow-y: scroll; width:400px;"></div> -->
 
       <% cats.forEach(function(cat){ %>
 
-      <div class="w3-card-4" style="width: 30%">
+      <div class="w3-card-4" style="width: 30%" id="catImage">
         <a href="/cat/detail?id=<%= cat._id %>">
           <img id="catImage"
             src="..<%= cat.image %>"
@@ -16,7 +15,6 @@
             style="width: 100%"
           />
         </a>
-        <!-- <div class="w3-container w3-center"> -->
         <div class="catFooter">
           <h3><%= cat.name %></h3>
         </div>
@@ -25,3 +23,4 @@
     </div>
   </div>
 </nav>
+
