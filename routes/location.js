@@ -11,7 +11,7 @@ router.use(express.urlencoded({ extended: true }));
 const locationCntrl = require("../controllers/location");
 
 // IsLoggedIn middleware
-const IsLoggedIn = require('../helper/isLoggedIn');
+const IsLoggedIn = require('../helper/IsLoggedIn');
 
 // Routes
 router.get("/location/index", locationCntrl.location_index_get);

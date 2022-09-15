@@ -13,7 +13,7 @@ const leaderboardCntrl = require("../controllers/leaderboard");
 
 
 // IsLoggedIn middleware
-const IsLoggedIn = require('../helper/isLoggedIn');
+const IsLoggedIn = require('../helper/IsLoggedIn');
 
 // Routes
 router.get("/leaderboard", leaderboardCntrl.leaderboard_show_get);

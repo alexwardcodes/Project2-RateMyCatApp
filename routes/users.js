@@ -11,7 +11,7 @@ router.use(express.urlencoded({ extended: true }));
 const userCntrl = require("../controllers/users");
 
 // IsLoggedIn middleware
-const isLoggedIn = require('../helper/isLoggedIn');
+const isLoggedIn = require('../helper/IsLoggedIn');
 
 // Routes
 router.get("/user/add", isLoggedIn, userCntrl.user_create_get);
