@@ -16,6 +16,6 @@ const leaderboardCntrl = require("../controllers/leaderboard");
 const IsLoggedIn = require('../helper/IsLoggedIn');
 
 // Routes
-router.get("/leaderboard", leaderboardCntrl.leaderboard_show_get);
+router.get("/Leaderboard", leaderboardCntrl.leaderboard_show_get);
 
 module.exports = router;
