@@ -40,7 +40,7 @@ exports.location_create_post = (req, res) => {
 exports.location_index_get = (req, res) => {
     User.find().populate('cat')
     .then(users => {
-        res.render("location/index", {users: users, moment}) // locations: locations, moment: moment
+        res.render("location/index", {users: users, moment}, {cat: cat, moment}) // locations: locations, moment: moment
     })
     .catch(err => {
         console.log(err);
