@@ -38,9 +38,9 @@ exports.location_create_post = (req, res) => {
 
 // HTTP GET - Location Index API
 exports.location_index_get = (req, res) => {
-    User.find()
+    User.find().populate('cat')
     .then(users => {
-        res.render("location/index", {users: users, moment}) // locations: locations, moment: moment
+        res.render("location/index", {users: users, moment}, {cat: cat, moment}) // locations: locations, moment: moment
     })
     .catch(err => {
         console.log(err);
@@ -57,46 +57,6 @@ exports.location_show_get = (req, res) => {
     Location.findById(req.query.id).populate('cat')
     .then(location => {
         res.render("location/detail", {location, moment}) // location: location, moment: moment
-    })
-    .catch(err => {
-        console.log(err)
-    })
-}
-
-
-// HTTP DELETE - Location
-exports.location_delete_get = (req, res) => {
-    console.log(req.query.id);
-
-    Location.findByIdAndDelete(req.query.id)
-    .then(() => {
-        res.redirect("/location/index");
-    })
-    .catch(err => {
-        console.log(err);
-    })
-}
-
-// Edit API
-
-// HTTP GET - Load Location Edit Form
-exports.location_edit_get = (req, res) => {
-    Location.findById(req.query.id)
-    .then((location) => {
-        res.render("location/edit", {location})
-    })
-    .catch(err => {
-        console.log(err);
-    })
-}
-
-// HTTP PUT - Location Update
-exports.location_update_put = (req, res) => {
-    console.log(req.body.id);
-
-    Location.findByIdAndUpdate(req.body.id, req.body)
-    .then(() => {
-        res.redirect("/location/index");
     })
     .catch(err => {
         console.log(err)

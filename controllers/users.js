@@ -10,7 +10,7 @@ const moment = require('moment');
 // Create
 // HTTP GET - go to create User Page
 exports.user_create_get = (req,res) => {
-    res.render("user/add");
+    res.render("User/add");
 }
 
 // HTTP POST - save user and take them to index
@@ -19,7 +19,7 @@ exports.user_create_post = (req, res) => {
     
     user.save()
     .then(() => {
-        res.redirect("/user/index");
+        res.redirect("/User/index");
     })
     .catch((err) => {
         console.log(err);
@@ -31,7 +31,7 @@ exports.user_create_post = (req, res) => {
 exports.user_index_get = (req, res) => {
     User.find().populate('cat')
     .then(users => {
-        res.render("user/index", {users: users, moment}) 
+        res.render("User/index", {users: users, moment}) 
     })
     .catch(err => {
         console.log(err);
@@ -45,7 +45,7 @@ exports.user_show_get = (req, res) => {
     // Find the User by ID
     User.findById(req.query.id).populate('cat')
     .then(user => {
-        res.render("user/detail", {user, moment}) 
+        res.render("User/detail", {user, moment}) 
     })
     .catch(err => {
         console.log(err)
@@ -58,7 +58,7 @@ exports.user_delete_get = (req, res) => {
 
     User.findByIdAndDelete(req.query.id)
     .then(() => {
-        res.redirect("/user/index");
+        res.redirect("/User/index");
     })
     .catch(err => {
         console.log(err);
@@ -71,7 +71,7 @@ exports.user_delete_get = (req, res) => {
 exports.user_edit_get = (req, res) => {
     User.findById(req.query.id)
     .then((user) => {
-        res.render("user/edit", {user})
+        res.render("User/edit", {user})
     })
     .catch(err => {
         console.log(err);
@@ -84,7 +84,7 @@ exports.user_update_put = (req, res) => {
 
     User.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
-        res.redirect("/user/index");
+        res.redirect("/User/index");
     })
     .catch(err => {
         console.log(err)

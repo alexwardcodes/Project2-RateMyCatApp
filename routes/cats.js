@@ -19,7 +19,7 @@ var upload = multer({ storage: storage })
 
 
 // IsLoggedIn middleware
-const isLoggedIn = require('../helper/isLoggedIn');
+const isLoggedIn = require('../helper/IsLoggedIn');
 
 // Routes
 router.get("/cat/add", isLoggedIn, catCntrl.cat_create_get);
