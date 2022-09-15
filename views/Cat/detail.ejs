@@ -5,7 +5,7 @@
         <div class="main-nav pad">
     
 <div id="catImage">
-    <img src="..<%= cat.image %>" height="auto" width="70%"/>
+    <img src="..<%= cat.image %>" height="auto" width="50%"/>
 
 </div>
 
@@ -64,11 +64,19 @@
 <div> Owner: <%= user.firstName + " " + user.lastName %></div>
 <div> Joined: <%= moment(user.createdAt).fromNow() %></div>
 
-<a href="/cat/edit?id=<%= cat._id %>" id="attribute" class="btn btn-primary cat-btn">
-    Edit <%= cat.name %>
-</a>
 
-<% }) %>
+
+<% console.log(currentUser._id + "is currentUser", cat.user._id + "is user");
+if (currentUser._id == user._id ) { %>
+    <a href="/cat/edit?id=<%= cat._id %>" id="attribute" class="btn btn-primary cat-btn">
+        Edit <%= cat.name %>
+    </a>
+    
+<% } else { %>
+
+    This is not your cat!
+
+<% }}) %>
 
     </div>
     </div>
