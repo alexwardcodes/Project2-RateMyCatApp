@@ -24,7 +24,7 @@ const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const catRouter = require("./routes/cats");
 const userRouter = require("./routes/users");
-const locationRouter = require("./routes/location");
+// const locationRouter = require("./routes/location");
 const leaderboardRouter = require("./routes/leaderboard");
 const authRouter = require("./routes/auth");
 const infoRouter = require("./routes/info");
@@ -57,7 +57,7 @@ app.use(function(req, res, next) {
 app.use("/", indexRouter);
 app.use("/", catRouter);
 app.use("/", userRouter);
-app.use("/", locationRouter);
+// app.use("/", locationRouter);
 app.use("/", leaderboardRouter);
 app.use("/", authRouter);
 app.use("/", infoRouter);
