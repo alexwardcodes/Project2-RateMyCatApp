@@ -212,7 +212,7 @@ I also learned that I actually enjoy managing a team of devs and handling manage
 
 ## Bugs
 
-At present the only bug is that our user information table does not fit neatly in the main body on mobile, but spills over.
+At present the main bug is that our user information table does not fit neatly in the main body on mobile, but spills over. Additionally, Heroku periodically deletes images, so some images such as profile photos will not display properly. This could be rectified by using Cloudinary for image storage rather than using Multer to upload to Heroku.
 
 ## Future Improvements
 
