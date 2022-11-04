@@ -2,7 +2,7 @@
 
 ## Description
 
-This project was assigned at the end of the fifth week of General Assembly’s 3-month SEI (Software Engineering Immersive) course, which teaches complete beginners the basics  of software engineering with an aim to launch a career in this sector. The aim of the project was to design an in Express.js/Node.js over the course of one week. This project was a group project together with two other studfents on the course.
+This project was assigned at the end of the fifth week of General Assembly’s 3-month SEI (Software Engineering Immersive) course, which teaches complete beginners the basics  of software engineering with an aim to launch a career in this sector. The aim of the project was to design an app in Express.js/Node.js over the course of one week. This project was a group project together with two other students on the course.
 
 ## Deployment link
 
@@ -13,15 +13,23 @@ This project was assigned at the end of the fifth week of General Assembly’s 3
 
 ### Instructions
 
-There are no specific installation requirements for this app. Simply create an account and log in to get started.
+#### Deployed app
+
+Rate My Cat works in your browser and requires no installation. Simply create an account and log in to get started!
+
+#### Local installation
+
+To get started with a local installation of this app using this repository, open a terminal and run the following command to install the dependencies required:
+
+npm i average-rating bcrypt cjs concat-stream connect-flash dotenv ejs express express-ejs-layouts express-session method-override moment mongoose multer passport passport-local readable readable-stream save sharp stream 
 
 ## Timeframe & Working Team
 
-We were given one week to complete this project, and we made great use of that time, working extra hours each day and through the weekend. Our brief was to build an app as a group, so I worked with two others from my course, acting as team leader to manage the project.
+We were given one week to complete this project and we made great use of that time, working extra hours each day and through the weekend. Our brief was to build an app as a group, so I worked with two others from my course, acting as team leader to manage the project.
 
 ## Technologies Used
 
-We built this project using Express.js and Node.js, with HTML for the basic layout and custom CSS for the styling. We used Multer for image upload and deployed our app on Heroku.
+We built this project using Express and Node.js, with HTML for the basic layout and custom CSS for the styling. We used Multer for image upload and deployed our app on Heroku.
 
 ## Brief
 
@@ -75,7 +83,7 @@ Together with my teammates, I built on the lessons from my first project to esta
 
 ### Team leadership  
 
-We agreed as a team that I would take the role of team leader, so I made sure from the outset that we followed a clear development and task tracking process in order to ensure we could hit our goals to deliver the minimum viable product on deadline, and give ourselves additional time to focus on styling touches, stretch goals and presentation day. I took an active role in managing team members and tasks, maintaining ongoing communication with my teammates via Slack and Zoom to ensure we all stayed on target with tasks and could resolve any issues or bugs constructively and in a timely manner.
+We agreed as a team that I would take the role of team leader, so I made sure from the outset that we followed a clear development and task tracking process in order to ensure we could hit our goals to deliver the minimum viable product on deadline, and give ourselves additional time to focus on styling touches, stretch goals and presentation day. I took an active role in managing team members and tasks, maintaining ongoing communication with my teammates via Slack and Zoom to guarantee we all stayed on target with tasks and could resolve any issues or bugs constructively and in a timely manner.
 
 ### Task management  
 
@@ -89,11 +97,11 @@ Documented below are the stages we went through in order to build the code for o
 
 ### Stage 1: Brainstorming  
 
-We had an initial brainstorming session as a team, coming up with various ideas for our app. We quickly settled on the idea of an app where users could upload images of cats and have these rated by other users. Users would also be able to rate other people's cats, and there would be also be a leaderboard showing the most popular/highest rated cats.
+We had an initial brainstorming session as a team, coming up with various ideas for our app. We quickly settled on the idea of an app where users could upload images of cats and have these rated by other users. Users would also be able to rate other people's cats, and there would also be a leaderboard showing the most popular/highest rated cats.
 
 ### Stage 2: Pick an idea  
 
-We chose our idea very quickly - who doesn't love cats? Dog people, that's who! - and armed with a solid idea, we began developing the wirefreames, ERDs and user stories for our app, which we had decided to name simply Rate My Cat.
+We chose our idea very quickly - who doesn't love cats? Dog people, that's who! - and armed with a solid idea, we began developing the wireframes, ERDs and user stories for our app, which we had decided to name simply Rate My Cat.
 
 ### Stage 3: Wireframe, ERD and user stories  
 
@@ -125,7 +133,7 @@ We took time to think about the features and functionalities we wanted our users
 
 ### Stage 4: Creating Git repo and starting files  
 
-As team leader, I took charge of initial file and folder setup, first creating a repo on Git for our project, then laying out the basic file and folder structure for our models, controllers, routes and views. I also created the database which would store our information on mongoDB.
+As team leader, I took charge of initial file and folder setup, first creating a repo on GitHub for our project, then laying out the basic file and folder structure for our models, controllers, routes and views. I also created the database which would store our information on mongoDB.
 
 ### Stage 5: Requirements  
 
@@ -162,15 +170,15 @@ We went through several iterations of our website, building on the style as we w
 
 ### Stage 10: Testing the site  
 
-With our site finished, we made sure to through each page and function to make sure everything worked well. We had enough time before delivery toi be able to do this, and it meant we were able to fix slight issues in e.g. the way elements displayed or functions affected elements on the page.
+With our site finished, we made sure to go through each page and function to make sure everything worked well. We had enough time before delivery to be able to do this, and it meant we were able to fix slight issues in e.g. the way elements displayed or functions affected elements on the page before delivering the project.
 
 ### Stage 11: Bonus features  
 
-We achieved a few of our bonus items by adding an About Us page which gave details on our team as wella s links to our personal Github repos, as well as our Ailurophiles link, which displays a list of other users to users who are logged into the site. 
+We achieved a few of our bonus items by adding an About Us page which gave details on our team as well as links to our personal GitHub repos, as well as our Ailurophiles link, which displays a list of other users to users who are logged into the site. 
 
 ## Challenges
 
-We originally wanted to include a location functionality that would let users see cats in other areas, displayed on a map. We realised that we didn't have enough time in the process to allow us to include this, so we decided to leave this functionality out entirely and focus on getitng our core functionalities up and runnign perectly. Creating the leaderboard was also a big challenge since I had a difficult time getting the cats to display properly in descending order of average rating.
+We originally wanted to include a location functionality that would let users see cats in other areas, displayed on a map. We realised that we didn't have enough time in the process to allow us to include this, so we decided to leave this functionality out entirely and focus on getitng our core functionalities up and running perectly. Creating the leaderboard was also a big challenge since I had a difficult time getting the cats to display properly in descending order of average rating.
 
 ### Problem-solving  
 
@@ -178,7 +186,7 @@ When it came to solving issues, I was proactive in identifying and helping with 
 
 ## Wins
 
-The biggest win for me was the fact that our project was finished, fully styled and ready to go on presentation day. Thanks to sticking to a proper development schedule and propmt bug/error detection and resolution, we were able to present our project on presentation day without any real issues! I'm also very happy that our app is almost entirely mobile responsive.
+The biggest win for me was the fact that our project was finished, fully styled and ready to go on presentation day. Thanks to sticking to a proper development schedule and prompt bug/error detection and resolution, we were able to present our project on presentation day without any real issues! I'm also very happy that our app is almost entirely mobile responsive.
 
 <img src="https://media.git.generalassemb.ly/user/44781/files/8c90c251-2768-45ec-8479-d290cf5f198d" width="300" height="600" />
 
@@ -200,7 +208,7 @@ This code sorts the cats in descending order of average rating. Since this was e
 
 This project taught me that communication between team members really is key to the success of a group project. In order to resolve issues promptly, it is essential to keep talking to the others on the team about what you're doing, when you're doing it, the issues you encounter along the way, and most importantly - to ask for help! It's also extremely important to ensure that if you're working in the same files, you tell each other what you're doing, and if necessary, create a separate branch on your local repo to work on individual updates and functionalities/features, then merge this into your development branch before pushing and opening a pull request. This avoids conflicts in the main development branch and potential merge issues, something we dealt with a lot in the early stages.
 
-I also learned that I actually enjoy managing a (smnall) team of devs and handling management of a project! It was strange at first, but having been my own boss for a decade and having to manage translation projects - some of them quite large and working with up to 10 other translators - I found my skills readily transferred across to software engineering and the development process went well as a result.
+I also learned that I actually enjoy managing a team of devs and handling management of a project! It was strange at first, but having been my own boss for a decade and having to manage translation projects - some of them quite large and working with up to 10 other translators - I found my skills readily transferred across to software engineering and the development process went well as a result.
 
 ## Bugs
 
