@@ -163,7 +163,7 @@ We tested functions repeatedly as we went along and got each other to test these
 
 ### Stage 9: Styling  
 
-We went through several iterations of our website, building on the style as we went, before we settled on the final version. We decided to go for a look that was fun and friendly - we're talking about rating cat pictures after all! - that would be welcoming to the user. We experienced a lot of issues with conflicting CSS rules in order to get the website mobile responsive, and managed to resolve all of our conflicts here just in time for presentation. Future iterations would make more use of media queries in order to avoid any conflicts when swtiching between computer and mobile.
+We went through several iterations of our website, building on the style as we went, before we settled on the final version. We decided to go for a look that was fun and friendly - we're talking about rating cat pictures after all! - that would be welcoming to the user. We experienced a lot of issues with conflicting CSS rules in order to get the website mobile responsive, and managed to resolve all of our conflicts here just in time for presentation. Future iterations would make more use of media queries in order to avoid any conflicts when switching between computer and mobile.
 
 ![Screenshot 2022-11-02 at 16 04 22](https://media.git.generalassemb.ly/user/44781/files/68a5eee4-722f-4369-9b31-6faa5a3b24df)
 
@@ -178,7 +178,7 @@ We achieved a few of our bonus items by adding an About Us page which gave detai
 
 ## Challenges
 
-We originally wanted to include a location functionality that would let users see cats in other areas, displayed on a map. We realised that we didn't have enough time in the process to allow us to include this, so we decided to leave this functionality out entirely and focus on getitng our core functionalities up and running perectly. Creating the leaderboard was also a big challenge since I had a difficult time getting the cats to display properly in descending order of average rating.
+We originally wanted to include a location functionality that would let users see cats in other areas, displayed on a map. We realised that we didn't have enough time in the process to allow us to include this, so we decided to leave this functionality out entirely and focus on getting our core functionalities up and running perfectly. Creating the leaderboard was also a big challenge since I had a difficult time getting the cats to display properly in descending order of average rating.
 
 ### Problem-solving  
 
