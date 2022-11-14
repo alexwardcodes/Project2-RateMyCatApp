@@ -8,6 +8,7 @@ This project was assigned at the end of the fifth week of General Assembly’s 3
 
 [You can find Rate My Cat App! deployed on this link](https://ratemycatapp.herokuapp.com/). Sign up and get rating all the cats you can handle!
 
+![Screenshot 2022-11-02 at 15 20 20](https://media.git.generalassemb.ly/user/44781/files/f17a8578-5c0d-479f-b369-d21662af77bf)
 
 ## Getting Started/Code Installation
 
@@ -109,9 +110,15 @@ We chose our idea very quickly - who doesn't love cats? Dog people, that's who! 
 
 We began with an ERD to map the relations between our models. You can find the link to our ERD [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/a3ae43f2f5e76c60127c7b5af1a83c0d83f1be7f/ERDs/RateMyCat%20ERD%20Final.pdf).
 
+![Screenshot 2022-11-07 at 18 05 52](https://media.git.generalassemb.ly/user/44781/files/4ad62ddb-4897-42e9-bfff-a130757ba8fd)
+
 #### Wireframes
 
 We then began working on wireframes to visualise how our site would look page by page. You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/8c10dd626513ff39705da146a9542ff4496579a5/Wireframe.png)
+
+![Screenshot 2022-11-07 at 18 06 47](https://media.git.generalassemb.ly/user/44781/files/f1f23c19-d442-43ac-8f6d-f2b69516ace9)
+![Screenshot 2022-11-07 at 18 07 01](https://media.git.generalassemb.ly/user/44781/files/67780992-f300-40ea-9a01-553c508b91a2)
+![Screenshot 2022-11-07 at 18 07 22](https://media.git.generalassemb.ly/user/44781/files/b80519df-ce3a-45ce-8a3e-4fd8e4afbdd7)
 
 #### User Stories
 
@@ -149,13 +156,69 @@ We got together as a team to define the basic requirements for our site. We want
 
 ### Stage 6: Basic layout  
 
-After we established the main functionalities we wanted from our app, we began working on the basic layout. We wanted the user to be greeted by a welcome page, with links to an About Us page, a joke Disclaimer page, and a page with a little bit more info about us and the project.
+After we established the main functionalities we wanted from our app, we began working on the basic layout. We wanted the user to be greeted by a welcome page, with links to an About Us page, a joke Disclaimer page, and a page with a little bit more info about us and the project. I started by creating the HTML file (**layout.ejs**) that would act as the basic template for our site. It includes links to the different sections of our website, which each represent a different route that accesses a different .ejs view file. The **<%- body %>** tag allowed me to insert other .ejs files - which are stored in separate folders - into the body of this page depending on what we wanted the user to see as they navigate the site, and whether they are logged in or not:
 
-![Screenshot 2022-11-02 at 15 20 20](https://media.git.generalassemb.ly/user/44781/files/f17a8578-5c0d-479f-b369-d21662af77bf)
+<img width="1189" alt="Screenshot 2022-11-07 at 18 13 47" src="https://media.git.generalassemb.ly/user/44781/files/c4b01fd4-a586-45bb-b748-ced31fea83f6">
+
+The **<%= title %>** tag on **layout.ejs** allowed me to change the title visible to the user on each page depending on the .ejs file being accessed:
+
+<img width="582" alt="Screenshot 2022-11-07 at 18 20 37" src="https://media.git.generalassemb.ly/user/44781/files/78e9f8e9-78f1-4e0b-a771-24ae63c2cb4f">
+
+It was initially tricky to understand how the concept of templating works in Express, but with a little trial and error, my understanding of how to make use of backend tags like **<%- body %>** and **<%= title %>** clicked into place, and setting up the initial .ejs files went much more smoothly. Templates are divided into folders based on what they relate to: **User**, **Leaderboard**, **Cat**, **auth** for sign-in/sign-up pages, **info** for our About, Disclaimer and Info pages, and **home** for the main site index.
 
 ### Stage 7: Structuring logic and working on functions  
 
-I worked specifically on creating and adding cats to users who had been signed up to the site. I created the model, controllers and routes for this, and made sure to populate each instance of a cat with the appropriate user information so we could see who the cat belongs to! I then hooked this up to the leaderboard functionality, which I built by creating a list of cats displayed by average rating.
+We split responsibilities evenly between us. One of our team worked on everything to do with the user; creating the User schema to model new users on, achieving sign-up, sign-in and sign-out functionalities via backend APIs, limiting access to the bulk of the website via user authentication, and creating the EJS templates for sign-up and sign-in.
+
+Another member of our team worked on creating some of the EJS templates for cats, site styling (CSS and adjusting template structures), and working on a functionality to view and search cats by location.
+
+After initial setup of the files and folders for our project, and having assigned tasks in Trello, I focused on our cat functionalities and the cat leaderboard. With my teammate having created the User schema already, I started by writing the APIs we would need for all of our CRUD operations relating to cats, e.g. add a cat, edit a cat's information, delete a cat and get information about the cat:
+
+<p float="left">
+<img width="350" alt="Screenshot 2022-11-08 at 13 42 34" src="https://media.git.generalassemb.ly/user/44781/files/8e356445-e8ed-4c8f-93b1-ac9b4b27fd1f">
+<img width="460" alt="Screenshot 2022-11-08 at 13 42 50" src="https://media.git.generalassemb.ly/user/44781/files/30cb891a-ede4-4d80-9992-df42e3b3bd71">
+ </p>
+ <p float="left">
+<img width="460" alt="Screenshot 2022-11-08 at 13 43 49" src="https://media.git.generalassemb.ly/user/44781/files/733e1e9e-1adf-46c2-b542-4d7608709d79">
+<img width="350" alt="Screenshot 2022-11-08 at 13 44 02" src="https://media.git.generalassemb.ly/user/44781/files/f09dd805-8822-4a8b-be4a-9ec8a5f94a78">
+ </p>
+<img width="460" alt="Screenshot 2022-11-08 at 13 43 20" src="https://media.git.generalassemb.ly/user/44781/files/02870da7-4744-4de3-9f5b-396680d2491d">
+
+As one example, let's take the "Add a cat" functionality., The user is first presented with a form on the frontend:
+
+<img width="806" alt="Screenshot 2022-11-08 at 14 08 51" src="https://media.git.generalassemb.ly/user/44781/files/4a4852af-6120-41f3-8746-9369b6790ce2">
+
+When the signed in user clicks submit on the form, this triggers the **cat_create_post** API, which then captures the information entered in the body of the page alongside the URL for the image of their cat, sends this as a request to the backend, and checks if this information is valid according to the structure of the Cat schema, which I had written at the outset:
+
+<img width="422" alt="Screenshot 2022-11-07 at 18 27 54" src="https://media.git.generalassemb.ly/user/44781/files/8aa4bc39-ce03-4ea0-9d39-277963331901">
+
+If the request received from the frontend is valid according to the Cat schema, this information is saved as an instance of Cat in our database:
+
+<img width="512" alt="Screenshot 2022-11-08 at 13 37 13" src="https://media.git.generalassemb.ly/user/44781/files/e497b96f-5dfe-4669-a7e3-1e20e03a16be">
+
+The API then finds the information for the user that is logged in using their ID, adds the new information for their cat to the user object created when they signed up, and saves this update:
+
+<img width="573" alt="Screenshot 2022-11-08 at 13 38 03" src="https://media.git.generalassemb.ly/user/44781/files/da92c483-2ab8-44e2-b009-bf099806dee1">
+
+For the leaderboard, I realised we only needed a single API:
+
+<img width="714" alt="Screenshot 2022-11-08 at 14 56 28" src="https://media.git.generalassemb.ly/user/44781/files/86c4d3b8-84ec-4acb-89c1-8c29bc9446f9">
+
+When the user navigates to the leaderboard page, this calls the **leaderboard_show_get** API, which searches for all of the cats listed in the database and populates the **user** field in each instance of a cat with the information related to the owner of the cat. All of this information is then sent as a response to the frontend, where the information is displayed to the user (see **Favourite Functions** below for more).
+ 
+### Favourite functions
+
+#### Cat POST API
+
+This function, which posts an instance of a cat, includes the average rating for the individual cat. It took some trial and error to get the average rating just right. Initially, I thought I would create an empty array to store each rating as it was made by the respective user, and then realised I could simplify the function. Here you can see that if no rating has yet been submitted for the cat in question, the first rating is pushed to the empty array in the "rating" key on the instance of the cat. If a rating already exists, the new rating is simply added to the existing value, which is then divided by 2 to provide an average. This average rating is then returned and displayed to the user.
+
+![Screenshot 2022-11-02 at 16 31 14](https://media.git.generalassemb.ly/user/44781/files/32864231-966d-47fd-847e-dcad30571882)
+
+#### Leaderboard sorting
+
+This code sorts the cats in descending order of average rating. Since this was early on in my development as an engineer, it felt like a hard task at the time, but now seems so easy by comparison! I created a variable called "order" which retrieves all instances of a cat from our database. These are then sorted via the .sort() method from highest to lowest, and displayed in descending order for the user.
+
+![Screenshot 2022-11-02 at 16 36 13](https://media.git.generalassemb.ly/user/44781/files/79e6328c-5a12-4321-9f92-9cbe5f5e14cb)
 
 ### Stage 8: Testing functions  
 
@@ -163,10 +226,29 @@ We tested functions repeatedly as we went along and got each other to test these
 
 ### Stage 9: Styling  
 
-We went through several iterations of our website, building on the style as we went, before we settled on the final version. We decided to go for a look that was fun and friendly - we're talking about rating cat pictures after all! - that would be welcoming to the user. We experienced a lot of issues with conflicting CSS rules in order to get the website mobile responsive, and managed to resolve all of our conflicts here just in time for presentation. Future iterations would make more use of media queries in order to avoid any conflicts when switching between computer and mobile.
+We went through several iterations of our website, building on the style as we went, before we settled on the final version. We knew we wanted to go for a look that was fun and friendly - we're talking about rating cat pictures after all! - that would be welcoming to the user:
 
-![Screenshot 2022-11-02 at 16 04 22](https://media.git.generalassemb.ly/user/44781/files/68a5eee4-722f-4369-9b31-6faa5a3b24df)
+![Screenshot 2022-09-13 at 12 02 52](https://media.git.generalassemb.ly/user/44781/files/3fcba1ee-d6f3-4927-b3a4-8d581bdcc4a5)
 
+Here you can see our first iteration. I originally went for a gradient from orange to pale orange for the title:
+
+_body {
+background: linear-gradient(to bottom, #FF6600 0%, #FFFFFF 100%);
+}_
+
+While being quite playful and welcoming, we all agreed that the background image was slightly distorted and the overall design was quite dated. We decided as a group to try a different style, and came up with something a little more neutral in terms of colour:
+
+![Screenshot 2022-09-13 at 22 52 15](https://media.git.generalassemb.ly/user/44781/files/8bd85d7e-4a41-46fe-9b0f-739cb07cdf57)
+
+We realised our background image was a major distraction for viewers to the site, and clashed with the other elements on the page, such as the main nav section with contents that change with each EJS template. We initially set the nav section to have an opacity of approximately 80% to allow users to still see the background image, but eventually decided to do away with a background image entirely and go for a more modern, simple, yet cute look:
+
+![Screenshot 2022-11-08 at 14 29 04](https://media.git.generalassemb.ly/user/44781/files/82ad3a4f-7525-441c-9ce9-650386622153)
+
+Our site is neatly divided into clear sections: the title at the top of the page, a nav bar with links to the different sections of our site, the main nav div which displays content by EJS template, and our footer with links. Here is an example of our CSS for the body (which includes the playful background image) and the div with a class of **main-nav** that the main content of our site sits in:
+
+<img width="500" alt="Screenshot 2022-11-08 at 14 44 38" src="https://media.git.generalassemb.ly/user/44781/files/4bb82294-d0db-44ea-aef2-880c14e9094c">
+
+We experienced a lot of issues with conflicting CSS rules in order to get the website mobile responsive, and managed to resolve all of our conflicts just in time for presentation. Future iterations would make more use of media queries in order to avoid any conflicts when switching between computer and mobile.
 
 ### Stage 10: Testing the site  
 
@@ -190,20 +272,6 @@ The biggest win for me was the fact that our project was finished, fully styled 
 
 <img src="https://media.git.generalassemb.ly/user/44781/files/8c90c251-2768-45ec-8479-d290cf5f198d" width="300" height="600" />
 
-### Favourite functions
-
-#### Cat POST API
-
-This function, which posts an instance of a cat, includes the average rating for the individual cat. It took some trial and error to get the average rating just right. Initially I thought I would create an empty array to store each rating as it was made by the respective user, and then realised I could simplify the function. If no rating has yet been submitted for the cat in question, the first rating is pushed to the instance. If a rating already exists, the new rating is simply add to the existing value, which is then divided by 2 to provide an average, which is then returned.
-
-![Screenshot 2022-11-02 at 16 31 14](https://media.git.generalassemb.ly/user/44781/files/32864231-966d-47fd-847e-dcad30571882)
-
-#### Leaderboard sorting
-
-This code sorts the cats in descending order of average rating. Since this was early on in my development as an engineer, it felt like a hard task at the time, but now seems so easy by comparison!
-
-![Screenshot 2022-11-02 at 16 36 13](https://media.git.generalassemb.ly/user/44781/files/79e6328c-5a12-4321-9f92-9cbe5f5e14cb)
-
 ## Key Learnings & Takeaways
 
 This project taught me that communication between team members really is key to the success of a group project. In order to resolve issues promptly, it is essential to keep talking to the others on the team about what you're doing, when you're doing it, the issues you encounter along the way, and most importantly - to ask for help! It's also extremely important to ensure that if you're working in the same files, you tell each other what you're doing, and if necessary, create a separate branch on your local repo to work on individual updates and functionalities/features, then merge this into your development branch before pushing and opening a pull request. This avoids conflicts in the main development branch and potential merge issues, something we dealt with a lot in the early stages.
@@ -216,4 +284,4 @@ At present the main bug is that our user information table does not fit neatly i
 
 ## Future Improvements
 
-In future iterations of Rate My Cat, I would want to add the location functionality so users can view cats in their area or another location, along with the average rating for the cats. This would be displayed on a map which users can search.
+In future iterations of Rate My Cat, I want to add the location functionality so users can view cats in their area or another location, along with the average rating for the cats. This would be displayed on a map which users can search.
