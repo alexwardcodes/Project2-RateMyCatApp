@@ -22,7 +22,7 @@ Rate My Cat works in your browser and requires no installation. Simply create an
 
 To get started with a local installation of this app using this repository, open a terminal and run the following command to install the dependencies required:
 
-npm i average-rating bcrypt cjs concat-stream connect-flash dotenv ejs express express-ejs-layouts express-session method-override moment mongoose multer passport passport-local readable readable-stream save sharp stream 
+```npm i average-rating bcrypt cjs concat-stream connect-flash dotenv ejs express express-ejs-layouts express-session method-override moment mongoose multer passport passport-local readable readable-stream save sharp stream``` 
 
 ## Timeframe & Working Team
 
