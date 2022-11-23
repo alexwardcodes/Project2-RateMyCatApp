@@ -88,7 +88,15 @@ We agreed as a team that I would take the role of team leader, so I made sure fr
 
 ### Task management  
 
-In order to create, assign and manage tasks, I created a public Trello board which all of the members of our group could access. This made working on our project much easier and allowed us to work more effectively as a group. We reviewed the Trello board each day to assign tasks, mark them as completed and create any additional tasks as required to keep track of these. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
+In order to create, assign and manage tasks, I created a public Trello board which all of the members of our group could access. This made working on our project much easier and allowed us to work more effectively as a group.
+
+We split responsibilities evenly between us. One of our team worked on everything to do with the user; creating the User schema to model new users on, achieving sign-up, sign-in and sign-out functionalities via backend APIs, limiting access to the bulk of the website via user authentication, and creating the EJS templates for sign-up and sign-in.
+
+Another member of our team worked on creating some of the EJS templates for cats, site styling (CSS and adjusting template structures), and working on a functionality to view and search cats by location.
+
+I worked on our cat functionalities, the cat leaderboard, templates and helped with styling. I also assisted with bug resolution and managed the overall flow of the project.
+
+We reviewed the Trello board each day to assign tasks, mark them as completed and create any additional tasks as required to keep track of these. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
 
 ![Screenshot 2022-09-09 at 12 46 53](https://media.git.generalassemb.ly/user/44781/files/518d6b93-92a0-493b-8d0a-33add6ebed95)
 
@@ -168,10 +176,6 @@ It was initially tricky to understand how the concept of templating works in Exp
 
 ### Stage 7: Structuring logic and working on functions  
 
-We split responsibilities evenly between us. One of our team worked on everything to do with the user; creating the User schema to model new users on, achieving sign-up, sign-in and sign-out functionalities via backend APIs, limiting access to the bulk of the website via user authentication, and creating the EJS templates for sign-up and sign-in.
-
-Another member of our team worked on creating some of the EJS templates for cats, site styling (CSS and adjusting template structures), and working on a functionality to view and search cats by location.
-
 After initial setup of the files and folders for our project, and having assigned tasks in Trello, I focused on our cat functionalities and the cat leaderboard. With my teammate having created the User schema already, I started by writing the APIs we would need for all of our CRUD operations relating to cats, e.g. add a cat, edit a cat's information, delete a cat and get information about the cat:
 
 <p float="left">
@@ -222,7 +226,7 @@ This code sorts the cats in descending order of average rating. Since this was e
 
 ### Stage 8: Testing functions  
 
-We tested functions repeatedly as we went along and got each other to test these to ensure we weren't missing any bugs. We iterated through functions a few times to get them just right before implementing them in the master branch.
+We tested functions repeatedly as we went along and got each other to test these to ensure we weren't missing any bugs. Using lots of console.logs to track the data  we were receiving from functions and our API calls to the database, we were able to spot errors and resolve these. We iterated through functions a few times to get them just right before implementing them in the master branch. We also checked the database to ensure our API calls were adding, updating and deleting data correctly.
 
 ### Stage 9: Styling  
 
