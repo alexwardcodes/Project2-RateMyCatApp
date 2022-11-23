@@ -30,7 +30,7 @@ We were given one week to complete this project and we made great use of that ti
 
 ## Technologies Used
 
-We built this project using Express and Node.js, with HTML for the basic layout and custom CSS for the styling. We used Multer for image upload and deployed our app on Heroku.
+We built this project using Express and Node.js, with HTML for the basic layout and custom CSS for the styling. We used Multer for image upload, MongoDB for database storage/retrieval and deployed our app on Heroku.
 
 ## Brief
 
