@@ -8,7 +8,7 @@ This project was assigned at the end of the fifth week of General Assembly’s 3
 
 [You can find Rate My Cat App! deployed on this link](https://ratemycatapp.herokuapp.com/). Sign up and get rating all the cats you can handle!
 
-![Screenshot 2022-11-02 at 15 20 20](https://media.git.generalassemb.ly/user/44781/files/f17a8578-5c0d-479f-b369-d21662af77bf)
+<img width="1620" height="961" alt="Image" src="https://github.com/user-attachments/assets/6804c61b-2e6e-4820-b0ff-dec004da7792" />
 
 ## Getting Started/Code Installation
 
@@ -98,7 +98,7 @@ I worked on our cat functionalities, the cat leaderboard, templates and helped w
 
 We reviewed the Trello board each day to assign tasks, mark them as completed and create any additional tasks as required to keep track of these. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
 
-![Screenshot 2022-09-09 at 12 46 53](https://media.git.generalassemb.ly/user/44781/files/518d6b93-92a0-493b-8d0a-33add6ebed95)
+<img width="1907" height="984" alt="Image" src="https://github.com/user-attachments/assets/432eb802-1fda-4fcb-8768-6fe96fd23aa1" />
 
 ## Build/Code Process
 
@@ -118,15 +118,15 @@ We chose our idea very quickly - who doesn't love cats? Dog people, that's who! 
 
 We began with an ERD to map the relations between our models. You can find the link to our ERD [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/a3ae43f2f5e76c60127c7b5af1a83c0d83f1be7f/ERDs/RateMyCat%20ERD%20Final.pdf).
 
-![Screenshot 2022-11-07 at 18 05 52](https://media.git.generalassemb.ly/user/44781/files/4ad62ddb-4897-42e9-bfff-a130757ba8fd)
+<img width="899" height="547" alt="Image" src="https://github.com/user-attachments/assets/63351d9a-af20-4807-8330-83205a9df1be" />
 
 #### Wireframes
 
 We then began working on wireframes to visualise how our site would look page by page. You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/8c10dd626513ff39705da146a9542ff4496579a5/Wireframe.png)
 
-![Screenshot 2022-11-07 at 18 06 47](https://media.git.generalassemb.ly/user/44781/files/f1f23c19-d442-43ac-8f6d-f2b69516ace9)
-![Screenshot 2022-11-07 at 18 07 01](https://media.git.generalassemb.ly/user/44781/files/67780992-f300-40ea-9a01-553c508b91a2)
-![Screenshot 2022-11-07 at 18 07 22](https://media.git.generalassemb.ly/user/44781/files/b80519df-ce3a-45ce-8a3e-4fd8e4afbdd7)
+<img width="541" height="244" alt="Image" src="https://github.com/user-attachments/assets/878f8565-cf9b-4eb6-8f04-5a20861a2c73" />
+<img width="512" height="248" alt="Image" src="https://github.com/user-attachments/assets/0b80281c-790e-43e0-ad8b-5613af491ffb" />
+<img width="573" height="271" alt="Image" src="https://github.com/user-attachments/assets/a47b3d13-de97-4b8d-b3e5-83357341b6be" />
 
 #### User Stories
 
@@ -166,11 +166,11 @@ We got together as a team to define the basic requirements for our site. We want
 
 After we established the main functionalities we wanted from our app, we began working on the basic layout. We wanted the user to be greeted by a welcome page, with links to an About Us page, a joke Disclaimer page, and a page with a little bit more info about us and the project. I started by creating the HTML file (**layout.ejs**) that would act as the basic template for our site. It includes links to the different sections of our website, which each represent a different route that accesses a different .ejs view file. The **<%- body %>** tag allowed me to insert other .ejs files - which are stored in separate folders - into the body of this page depending on what we wanted the user to see as they navigate the site, and whether they are logged in or not:
 
-<img width="1189" alt="Screenshot 2022-11-07 at 18 13 47" src="https://media.git.generalassemb.ly/user/44781/files/c4b01fd4-a586-45bb-b748-ced31fea83f6">
+<img width="1189" height="824" alt="Image" src="https://github.com/user-attachments/assets/30ab40b0-c719-440f-a239-83783ded7a09" />
 
 The **<%= title %>** tag on **layout.ejs** allowed me to change the title visible to the user on each page depending on the .ejs file being accessed:
 
-<img width="582" alt="Screenshot 2022-11-07 at 18 20 37" src="https://media.git.generalassemb.ly/user/44781/files/78e9f8e9-78f1-4e0b-a771-24ae63c2cb4f">
+<img width="582" height="449" alt="Image" src="https://github.com/user-attachments/assets/980768f8-f889-454a-9c92-89436788761a" />
 
 It was initially tricky to understand how the concept of templating works in Express, but with a little trial and error, my understanding of how to make use of backend tags like **<%- body %>** and **<%= title %>** clicked into place, and setting up the initial .ejs files went much more smoothly. Templates are divided into folders based on what they relate to: **User**, **Leaderboard**, **Cat**, **auth** for sign-in/sign-up pages, **info** for our About, Disclaimer and Info pages, and **home** for the main site index.
 
@@ -179,34 +179,34 @@ It was initially tricky to understand how the concept of templating works in Exp
 After initial setup of the files and folders for our project, and having assigned tasks in Trello, I focused on our cat functionalities and the cat leaderboard. With my teammate having created the User schema already, I started by writing the APIs we would need for all of our CRUD operations relating to cats, e.g. add a cat, edit a cat's information, delete a cat and get information about the cat:
 
 <p float="left">
-<img width="350" alt="Screenshot 2022-11-08 at 13 42 34" src="https://media.git.generalassemb.ly/user/44781/files/8e356445-e8ed-4c8f-93b1-ac9b4b27fd1f">
-<img width="460" alt="Screenshot 2022-11-08 at 13 42 50" src="https://media.git.generalassemb.ly/user/44781/files/30cb891a-ede4-4d80-9992-df42e3b3bd71">
+<img width="388" height="434" alt="Image" src="https://github.com/user-attachments/assets/93159938-00a9-444f-b9f3-ee79bb2389cc" />
+<img width="528" height="434" alt="Image" src="https://github.com/user-attachments/assets/9b2a7fe6-6037-4f8d-b1c8-31927356dacd" />
  </p>
  <p float="left">
-<img width="460" alt="Screenshot 2022-11-08 at 13 43 49" src="https://media.git.generalassemb.ly/user/44781/files/733e1e9e-1adf-46c2-b542-4d7608709d79">
-<img width="350" alt="Screenshot 2022-11-08 at 13 44 02" src="https://media.git.generalassemb.ly/user/44781/files/f09dd805-8822-4a8b-be4a-9ec8a5f94a78">
+<img width="508" height="460" alt="Image" src="https://github.com/user-attachments/assets/78dea7fc-b2ba-4ad3-abae-e9817ea04452" />
+<img width="406" height="460" alt="Image" src="https://github.com/user-attachments/assets/f17fee4e-2b88-48ab-8f1d-4db6a2fc5770" />
  </p>
-<img width="460" alt="Screenshot 2022-11-08 at 13 43 20" src="https://media.git.generalassemb.ly/user/44781/files/02870da7-4744-4de3-9f5b-396680d2491d">
+<img width="639" height="435" alt="Image" src="https://github.com/user-attachments/assets/496c9dc6-e27f-4696-8289-54f487aeb5c3" />
 
 As one example, let's take the "Add a cat" functionality., The user is first presented with a form on the frontend:
 
-<img width="806" alt="Screenshot 2022-11-08 at 14 08 51" src="https://media.git.generalassemb.ly/user/44781/files/4a4852af-6120-41f3-8746-9369b6790ce2">
+<img width="806" height="823" alt="Image" src="https://github.com/user-attachments/assets/48a58a0b-6f55-4755-9ec7-28ab4c83c552" />
 
 When the signed in user clicks submit on the form, this triggers the **cat_create_post** API, which then captures the information entered in the body of the page alongside the URL for the image of their cat, sends this as a request to the backend, and checks if this information is valid according to the structure of the Cat schema, which I had written at the outset:
 
-<img width="422" alt="Screenshot 2022-11-07 at 18 27 54" src="https://media.git.generalassemb.ly/user/44781/files/8aa4bc39-ce03-4ea0-9d39-277963331901">
+<img width="422" height="369" alt="Image" src="https://github.com/user-attachments/assets/f63fe036-4930-4ae7-9dc2-8e8999910812" />
 
 If the request received from the frontend is valid according to the Cat schema, this information is saved as an instance of Cat in our database:
 
-<img width="512" alt="Screenshot 2022-11-08 at 13 37 13" src="https://media.git.generalassemb.ly/user/44781/files/e497b96f-5dfe-4669-a7e3-1e20e03a16be">
+<img width="512" height="228" alt="Image" src="https://github.com/user-attachments/assets/8536a2ec-329e-42a3-a41b-f7ef8b50ebc9" />
 
 The API then finds the information for the user that is logged in using their ID, adds the new information for their cat to the user object created when they signed up, and saves this update:
 
-<img width="573" alt="Screenshot 2022-11-08 at 13 38 03" src="https://media.git.generalassemb.ly/user/44781/files/da92c483-2ab8-44e2-b009-bf099806dee1">
+<img width="573" height="328" alt="Image" src="https://github.com/user-attachments/assets/b4b1bab5-8272-4c3a-a983-a7fb5784a01c" />
 
 For the leaderboard, I realised we only needed a single API:
 
-<img width="714" alt="Screenshot 2022-11-08 at 14 56 28" src="https://media.git.generalassemb.ly/user/44781/files/86c4d3b8-84ec-4acb-89c1-8c29bc9446f9">
+<img width="714" height="232" alt="Image" src="https://github.com/user-attachments/assets/109791d1-5d0f-4171-b74b-23f9c93ab2f5" />
 
 When the user navigates to the leaderboard page, this calls the **leaderboard_show_get** API, which searches for all of the cats listed in the database and populates the **user** field in each instance of a cat with the information related to the owner of the cat. All of this information is then sent as a response to the frontend, where the information is displayed to the user (see **Favourite Functions** below for more).
  
@@ -216,13 +216,13 @@ When the user navigates to the leaderboard page, this calls the **leaderboard_sh
 
 This function, which posts an instance of a cat, includes the average rating for the individual cat. It took some trial and error to get the average rating just right. Initially, I thought I would create an empty array to store each rating as it was made by the respective user, and then realised I could simplify the function. Here you can see that if no rating has yet been submitted for the cat in question, the first rating is pushed to the empty array in the "rating" key on the instance of the cat. If a rating already exists, the new rating is simply added to the existing value, which is then divided by 2 to provide an average. This average rating is then returned and displayed to the user.
 
-![Screenshot 2022-11-02 at 16 31 14](https://media.git.generalassemb.ly/user/44781/files/32864231-966d-47fd-847e-dcad30571882)
+<img width="716" height="311" alt="Image" src="https://github.com/user-attachments/assets/b404a797-868a-4c74-9abe-68d604e11b27" />
 
 #### Leaderboard sorting
 
 This code sorts the cats in descending order of average rating. Since this was early on in my development as an engineer, it felt like a hard task at the time, but now seems so easy by comparison! I created a variable called "order" which retrieves all instances of a cat from our database. These are then sorted via the .sort() method from highest to lowest, and displayed in descending order for the user.
 
-![Screenshot 2022-11-02 at 16 36 13](https://media.git.generalassemb.ly/user/44781/files/79e6328c-5a12-4321-9f92-9cbe5f5e14cb)
+<img width="643" height="507" alt="Image" src="https://github.com/user-attachments/assets/4e325bc3-50b0-46df-b3fe-0fbd57422c52" />
 
 ### Stage 8: Testing functions  
 
@@ -232,7 +232,7 @@ We tested functions repeatedly as we went along and got each other to test these
 
 We went through several iterations of our website, building on the style as we went, before we settled on the final version. We knew we wanted to go for a look that was fun and friendly - we're talking about rating cat pictures after all! - that would be welcoming to the user:
 
-![Screenshot 2022-09-13 at 12 02 52](https://media.git.generalassemb.ly/user/44781/files/3fcba1ee-d6f3-4927-b3a4-8d581bdcc4a5)
+<img width="1271" height="905" alt="Image" src="https://github.com/user-attachments/assets/879405f1-421c-4d52-878e-a385edc3d1b0" />
 
 Here you can see our first iteration. I originally went for a gradient from orange to pale orange for the title:
 
@@ -242,15 +242,15 @@ background: linear-gradient(to bottom, #FF6600 0%, #FFFFFF 100%);
 
 While being quite playful and welcoming, we all agreed that the background image was slightly distorted and the overall design was quite dated. We decided as a group to try a different style, and came up with something a little more neutral in terms of colour:
 
-![Screenshot 2022-09-13 at 22 52 15](https://media.git.generalassemb.ly/user/44781/files/8bd85d7e-4a41-46fe-9b0f-739cb07cdf57)
+<img width="1330" height="882" alt="Image" src="https://github.com/user-attachments/assets/353a0204-f3f7-41d1-99d8-3374eb7958e9" />
 
 We realised our background image was a major distraction for viewers to the site, and clashed with the other elements on the page, such as the main nav section with contents that change with each EJS template. We initially set the nav section to have an opacity of approximately 80% to allow users to still see the background image, but eventually decided to do away with a background image entirely and go for a more modern, simple, yet cute look:
 
-![Screenshot 2022-11-08 at 14 29 04](https://media.git.generalassemb.ly/user/44781/files/82ad3a4f-7525-441c-9ce9-650386622153)
+<img width="945" height="862" alt="Image" src="https://github.com/user-attachments/assets/8af10891-95ba-4b85-a08d-ad1175217713" />
 
 Our site is neatly divided into clear sections: the title at the top of the page, a nav bar with links to the different sections of our site, the main nav div which displays content by EJS template, and our footer with links. Here is an example of our CSS for the body (which includes the playful background image) and the div with a class of **main-nav** that the main content of our site sits in:
 
-<img width="500" alt="Screenshot 2022-11-08 at 14 44 38" src="https://media.git.generalassemb.ly/user/44781/files/4bb82294-d0db-44ea-aef2-880c14e9094c">
+<img width="500" height="819" alt="Image" src="https://github.com/user-attachments/assets/f419f8e1-90c3-47e2-9e09-93b830114164" />
 
 We experienced a lot of issues with conflicting CSS rules in order to get the website mobile responsive, and managed to resolve all of our conflicts just in time for presentation. Future iterations would make more use of media queries in order to avoid any conflicts when switching between computer and mobile.
 
@@ -274,7 +274,7 @@ When it came to solving issues, I was proactive in identifying and helping with 
 
 The biggest win for me was the fact that our project was finished, fully styled and ready to go on presentation day. Thanks to sticking to a proper development schedule and prompt bug/error detection and resolution, we were able to present our project on presentation day without any real issues! I'm also very happy that our app is almost entirely mobile responsive.
 
-<img src="https://media.git.generalassemb.ly/user/44781/files/8c90c251-2768-45ec-8479-d290cf5f198d" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/480698c1-64b0-4fcf-b47d-c388bc1fef80" width="300" height="600" />
 
 ## Key Learnings & Takeaways
 
